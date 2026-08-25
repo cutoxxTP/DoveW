@@ -1,6 +1,6 @@
 # Inventario contenuti — www.tp-italia.com
 
-Archivio catturato il 25/08/2026. **45 pagine HTML**, 22.309 parole, 345 file totali (~73 MB tra immagini, PDF e 6 video).
+Archivio catturato il 25/08/2026. **47 pagine HTML**, 22.517 parole, 540 file totali (~97 MB tra immagini, PDF e 6 video).
 
 Tutto il materiale originale è in `archivio/sito/` (copia byte per byte del sito online) e in `archivio/contenuti/` (testo di ogni pagina estratto in Markdown, riutilizzabile).
 
@@ -93,6 +93,8 @@ La colonna **Destino** va compilata insieme al nuovo intento: `MANTIENI` · `RIS
 
 | Pagina | Titolo | Parole | Contenuto | Destino |
 |---|---|---:|---|---|
+| `azienda.html` | Company Profile | 195 | Chi siamo: Mission + Company Profile — nata negli anni '80, "Knowledge Company" | |
 | `indicazioni.html` | — | 45 | Sede, mappa, telefono, email | |
 | `lavoraconnoi.html` | Lavora Con Noi | 14 | Lavora con noi — form Google Forms in iframe | |
+| `contatti.html` | — | 13 | Contatti / Assistenza Pro — quasi solo immagini | |
 | `modulo.html` | Richiedi Informazioni | 13 | Richiedi informazioni — form Google Forms in iframe | |

@@ -45,6 +45,15 @@
   "links": 21
  },
  {
+  "file": "azienda.html",
+  "title": "Company Profile",
+  "keywords": "Company Profile ",
+  "description": "",
+  "words": 195,
+  "images": 24,
+  "links": 18
+ },
+ {
   "file": "bussinessapps.html",
   "title": "Le Bussiness Apps",
   "keywords": "Le BussinessApps di Technology Partners Italia",
@@ -61,6 +70,15 @@
   "words": 157,
   "images": 26,
   "links": 20
+ },
+ {
+  "file": "contatti.html",
+  "title": "",
+  "keywords": "",
+  "description": "",
+  "words": 13,
+  "images": 24,
+  "links": 22
  },
  {
   "file": "crm.html",

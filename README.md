@@ -8,7 +8,7 @@ di qualsiasi modifica; i contenuti vengono riscritti e ampliati partendo da quel
 
 | Cartella | Contenuto |
 |---|---|
-| `archivio/sito/` | Copia integrale del sito online al 25/08/2026: 45 pagine HTML, CSS, ~490 immagini, 6 video MP4, 2 PDF. Non va modificata: è la fonte di verità. |
+| `archivio/sito/` | Copia integrale del sito online al 25/08/2026: 47 pagine HTML, CSS, ~490 immagini, 6 video MP4, 2 PDF. Non va modificata: è la fonte di verità. |
 | `archivio/contenuti/` | Testo di ogni pagina estratto in Markdown (`.md` per pagina) + `_index.json` con titoli, keyword e conteggi. È il materiale da cui riscrivere. |
 | `INVENTARIO.md` | Tabella pagina per pagina, raggruppata per area, con la colonna *Destino* da compilare. |
 
@@ -17,7 +17,7 @@ di qualsiasi modifica; i contenuti vengono riscritti e ampliati partendo da quel
 - Sito **statico** generato con **RocketCake**, ospitato su Register.it. Tutte le pagine
   sono in root (`/nomepagina.html`), nessuna sottocartella, nessun CMS.
 - Menu unico in cima a tutte le pagine: Home · Chi Siamo · Prodotti · Contattaci · Lavora con Noi.
-- 45 pagine, ~22.300 parole. Aree: ERP Mago, ERP Ad Hoc Infinity, suite Zucchetti Infinity
+- 47 pagine, ~22.500 parole. Aree: ERP Mago, ERP Ad Hoc Infinity, suite Zucchetti Infinity
   (CRM, DMS, HR, Portal, BI, fatturazione elettronica, presenze), soluzioni proprie
   (ITEK4, OPERA MES, W.App, EasyTime, EasyInd 4.0, MO.TI., RFID), sistemistica, news, azienda.
 - Contatti: Via Vincenzo Monti 74, 20832 Desio (MB) · commerciale@tp-italia.com ·
@@ -26,6 +26,11 @@ di qualsiasi modifica; i contenuti vengono riscritti e ampliati partendo da quel
 
 ## Cosa è emerso dall'analisi (da correggere nel rifacimento)
 
+0. **Due pagine erano invisibili a qualsiasi crawler**: `azienda.html` (Chi siamo — Mission e
+   Company Profile) e `contatti.html` non sono linkate da nessun `href` nell'HTML. I menu a
+   tendina sono costruiti in JavaScript, quindi quelle pagine esistono online ma nessun motore
+   di ricerca le raggiunge. È il caso più grave: la pagina che racconta chi siete non è
+   indicizzabile.
 1. **Nessuna `meta description`** su nessuna pagina, e **8 pagine hanno lo stesso `<title>`**
    ("Technology Partners Italia"): Google non ha modo di distinguerle.
 2. **Nessuna sitemap.xml e nessun robots.txt** (entrambi 404).
@@ -50,3 +55,13 @@ Tutte cose risolvibili nella ricostruzione, senza perdere un rigo dei contenuti 
 Definire il **nuovo intento** del sito e compilare la colonna *Destino* di `INVENTARIO.md`,
 poi progettare la nuova architettura delle pagine (vecchie riscritte + nuove) e la mappa
 dei redirect 301 dai vecchi URL.
+
+## Anteprima navigabile
+
+`anteprima/archivio-live.html` è una copia autonoma dell'intero sito in un unico file:
+tutte le 47 pagine con CSS e JavaScript originali, le immagini incorporate come data URI
+(WebP, per stare sotto il limite di peso) e i link interni che funzionano. Serve a rivedere
+il sito com'era senza dipendere dal dominio online. Video e contenuti esterni (mappe Google,
+Google Forms, YouTube) sono sostituiti da segnaposto: i file originali restano in `archivio/sito/`.
+
+Si rigenera con gli script in `strumenti/`.
