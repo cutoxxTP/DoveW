@@ -86,3 +86,22 @@ il sito com'era senza dipendere dal dominio online. Video e contenuti esterni (m
 Google Forms, YouTube) sono sostituiti da segnaposto: i file originali restano in `archivio/sito/`.
 
 Si rigenera con gli script in `strumenti/`.
+
+## Vedere il sito fuori da Claude
+
+**In locale.** Scaricare il repository (Code → Download ZIP su GitHub, oppure `git clone`), poi aprire
+`sito/index.html` con un doppio clic: i riferimenti ai CSS sono stati ripuliti dal suffisso anti-cache,
+quindi le pagine si vedono correttamente anche aperte da disco. Per una resa identica a quella online
+(percorsi assoluti, redirect di `.htaccess`) conviene comunque servirle:
+
+    python3 -m http.server 8000 --directory sito
+
+e aprire http://localhost:8000
+
+**Su un indirizzo pubblico, prima del passaggio definitivo.** Caricare via FTP il contenuto di `sito/`
+in una sottocartella dello spazio Register — per esempio `/anteprima` — così l'indirizzo diventa
+`www.tp-italia.com/anteprima/`. Il sito attuale resta intatto nella root. La sottocartella si può
+proteggere con password via `.htaccess`, per mostrarla solo a chi deve approvarla.
+
+**Nota sui video.** I sei file MP4 in `sito/rc_images/` pesano 53 MB: se l'FTP è lento conviene
+caricarli per ultimi, il resto del sito funziona anche senza.
