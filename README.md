@@ -50,6 +50,27 @@ di qualsiasi modifica; i contenuti vengono riscritti e ampliati partendo da quel
 
 Tutte cose risolvibili nella ricostruzione, senza perdere un rigo dei contenuti attuali.
 
+## Verifica di completezza dell'archivio
+
+Il mirror iniziale via `wget` aveva scaricato solo ciò che è referenziato nell'HTML. Le pagine usano
+però slideshow JavaScript che caricano le immagini a runtime, e i menu a tendina sono generati in
+JavaScript: mancavano **243 immagini** e **2 pagine intere** (`azienda.html`, `contatti.html`).
+Recuperate aprendo tutte le pagine in un browser headless, registrando ogni 404 e riscaricandolo.
+Secondo giro di verifica: **0 richieste fallite**.
+
+## Consultare l'archivio in locale
+
+I file CSS sono referenziati dall'HTML con un suffisso anti-cache (`index_html.css?h=2b9d5bd8`),
+che un server statico ignora. Per rivedere il sito originale esattamente com'è online:
+
+    python3 -m http.server 8000 --directory archivio/sito
+
+## Il sito in lavorazione
+
+`sito/` è la copia di lavoro: parte identica all'archivio e viene modificata pagina per pagina
+secondo `STRATEGIA.md` e la colonna *Destino* di `INVENTARIO.md`. Si confronta con l'originale
+servendo le due cartelle su due porte diverse.
+
 ## Prossimo passo
 
 Definire il **nuovo intento** del sito e compilare la colonna *Destino* di `INVENTARIO.md`,
