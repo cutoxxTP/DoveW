@@ -40,102 +40,153 @@
 
 	<title>Tecnology Partners News</title>
 	<link rel="stylesheet" type="text/css" href="news_html.css?h=30a70c43">
+
+<style>
+/* barra di navigazione e mappa del piede — aggiunte 2026, indipendenti dagli stili della pagina */
+.tpw{max-width:1120px;margin:0 auto;padding:0 20px;text-align:left;
+  font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}
+.tpTop *,.tpMappa *{box-sizing:border-box}
+.tpTop{font-family:Arial,Helvetica,sans-serif}
+/* i contenuti originali sono flottanti: senza questo il piede risalirebbe sopra la pagina */
+body > div:not(.tpTop):not(.tpMappa)::after{content:"";display:table;clear:both}
+
+
+/* ---- barra di navigazione unica del sito ---- */
+.tpTop{border-bottom:1px solid #D6D5D7;background:#fff;position:relative;z-index:60}
+.tpTop .tpw{display:flex;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+.tpTop .tpLogo img{height:52px;width:auto;display:block}
+.tpNav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.tpNav>a,.tpDrop>span{display:block;color:#000080;text-decoration:none;font-weight:bold;
+  font-size:14.5px;padding:9px 10px;border-radius:4px;cursor:pointer;white-space:nowrap}
+.tpNav>a:hover,.tpDrop:hover>span{background:#F0F3F9;color:#0000A0}
+.tpNav>a.on,.tpDrop.on>span{box-shadow:inset 0 -2px 0 #000080}
+.tpDrop{position:relative}
+.tpDrop>span::after{content:" \25be";font-size:10px;color:#7a86a8}
+.tpMenu{display:none;position:absolute;top:100%;left:0;min-width:262px;background:#fff;
+  border:1px solid #D6D5D7;border-top:3px solid #000080;border-radius:0 0 6px 6px;
+  box-shadow:0 14px 30px -12px rgba(0,0,40,.35);padding:8px 0}
+.tpDrop:hover .tpMenu,.tpDrop:focus-within .tpMenu{display:block}
+.tpDrop:last-of-type .tpMenu{left:auto;right:0}
+.tpMenu a{display:block;padding:7px 18px;color:#233;text-decoration:none;font-size:14px;font-weight:normal}
+.tpMenu a:hover{background:#F0F3F9;color:#000080}
+.tpMenu a.on{color:#000080;font-weight:bold}
+.tpMenu hr{border:0;border-top:1px solid #E6E9F0;margin:7px 14px}
+.tpNav .tpCta{background:#000080;color:#fff;margin-left:8px}
+.tpNav .tpCta:hover{background:#0000A0;color:#fff}
+.tpBurger{display:none;margin-left:auto;background:#fff;border:1px solid #000080;color:#000080;
+  font-weight:bold;font-size:14px;border-radius:5px;padding:9px 14px;cursor:pointer}
+.tpTop a:focus-visible,.tpTop button:focus-visible,.tpDrop>span:focus-visible{outline:2px solid #0000A0;outline-offset:2px}
+@media (max-width:1080px){
+  .tpNav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;
+    align-items:stretch;gap:0;padding:6px 16px 16px;border-bottom:1px solid #D6D5D7;
+    box-shadow:0 18px 30px -18px rgba(0,0,40,.5);max-height:76vh;overflow:auto}
+  .tpNav.open{display:flex}
+  .tpBurger{display:block}
+  .tpDrop>span{padding:11px 4px}
+  .tpMenu{display:block;position:static;border:0;box-shadow:none;padding:0 0 8px 14px;min-width:0;border-top:0}
+  .tpMenu a{padding:7px 4px}
+  .tpNav .tpCta{margin:10px 0 0;text-align:center}
+}
+/* ---- mappa nel piede ---- */
+.tpMappa{background:#0a1a52;color:#c9d8ef;padding:30px 0 6px;font-size:13.5px}
+.tpMappa .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px}
+.tpMappa h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.tpMappa a{color:#c9d8ef;text-decoration:none;display:block;padding:3px 0;line-height:1.4}
+.tpMappa a:hover{color:#fff;text-decoration:underline}
+
+</style>
 </head>
 <body>
+<div class="tpTop"><div class="tpw">
+<a class="tpLogo" href="index.html" aria-label="Technology Partners Italia, home"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
+<button class="tpBurger" id="tpBurger" aria-expanded="false" aria-controls="tpNav">Menu</button>
+<nav class="tpNav" id="tpNav" aria-label="Navigazione principale">
+<a href="index.html">Home</a>
+<div class="tpDrop">
+<span tabindex="0" role="button">Aree d'impatto</span>
+<div class="tpMenu">
+<a href="ai.html">AI nativa</a>
+<a href="esg.html">Sostenibilit&agrave; ESG</a>
+<a href="fabbrica50.html">Fabbrica 5.0 e finanza agevolata</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Gestionali ERP</span>
+<div class="tpMenu">
+<a href="gestionalix.html">Quale gestionale scegliere</a>
+<hr>
+<a href="mago4.html">Mago4</a>
+<a href="magoamministrativa.html">&nbsp;&nbsp;Amministrazione e finanza</a>
+<a href="magovenditeacquisti.html">&nbsp;&nbsp;Vendite e acquisti</a>
+<a href="magomagazzino.html">&nbsp;&nbsp;Magazzino e logistica</a>
+<a href="magoproduzione.html">&nbsp;&nbsp;Produzione</a>
+<a href="magoweb.html">MagoWeb</a>
+<a href="magocloud.html">MagoCloud</a>
+<hr>
+<a href="ahi.html">Ad Hoc Infinity</a>
+<a href="ahiamministrazione.html">&nbsp;&nbsp;Amministrazione</a>
+<a href="ahivendite.html">&nbsp;&nbsp;Vendite e acquisti</a>
+<a href="ahilogistica.html">&nbsp;&nbsp;Magazzino e logistica</a>
+<a href="ahigestione.html">&nbsp;&nbsp;Controllo di gestione</a>
+<hr>
+<a href="infinity.html">Infinity Zucchetti</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Applicazioni</span>
+<div class="tpMenu">
+<a href="crm.html">CRM</a>
+<a href="dms.html">Gestione documentale</a>
+<a href="portal.html">Portali ed e-commerce</a>
+<a href="infobusiness.html">Business Intelligence</a>
+<a href="fepasos.html">Fatturazione elettronica</a>
+<a href="hr.html">Persone e presenze</a>
+<a href="ztravel.html">Trasferte e note spese</a>
+<hr>
+<a href="prodottinew.html">Tutti i prodotti</a>
+<a href="verticali.html">Prodotti verticali</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Fabbrica e magazzino</span>
+<div class="tpMenu">
+<a href="easytime.html">EasyTime &mdash; tempi di produzione</a>
+<a href="easyind40.html">EasyInd &mdash; macchine interconnesse</a>
+<a href="operames.html">Opera MES</a>
+<hr>
+<a href="wapp.html">W.App &mdash; WMS magazzino</a>
+<a href="rfid.html">Barcode o RFID</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Assistenza</span>
+<div class="tpMenu">
+<a href="itek4.html">iTek4 &mdash; noleggio e manutenzione</a>
+<a href="mobileticketnew.html">Mobile Ticket &mdash; ticketing</a>
+<hr>
+<a href="contatti.html">Assistenza Pro</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Sistemi</span>
+<div class="tpMenu">
+<a href="sistemi.html">Sistemistica e sicurezza</a>
+<a href="tecnologia.html">Innovazione tecnologica</a>
+<a href="ruckus.html">WiFi professionale Ruckus</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Azienda</span>
+<div class="tpMenu">
+<a href="azienda.html">Chi siamo</a>
+<a href="newsnew.html">News</a>
+<a href="lavoraconnoi.html">Lavora con noi</a>
+<a href="indicazioni.html">Dove siamo</a>
+</div></div>
+<a class="tpCta" href="modulo.html">Contatti</a>
+</nav></div></div>
+
 <div class="textstyle1">
 <a href="index.html"><img src="rc_images/newlogoquadro288x288bianco.png" width="288" height="288" id="img_4861029c" alt="" title="" border="0" /></a><div id="container_56c293c2"><div class="textstyle1">  <a href="https://www.instagram.com/tp_italia/" target="_blank"><img src="rc_images/instagram.png" id="img_77bb760a" alt="" title="" border="0" /></a>
   <a href="https://www.youtube.com/channel/UC2emrPNT5PtEH9YRa-VnQLw" target="_blank"><img src="rc_images/youtube.jpg" id="img_1f573b75" alt="" title="YouTube" border="0" /></a>
   <a href="https://www.facebook.com/Technology-Partners-Italia-104782464767334" target="_blank"><img src="rc_images/facebook_f_logo_svg.png" id="img_713aaca6" alt="" title="Facebook" border="0" /></a>
   <a href="https://www.linkedin.com/company/technology-partners-italia" target="_blank"><img src="rc_images/witter.png" id="img_490f5bbd" alt="" title="Linkedin" border="0" /></a>
 </div>
-</div><div id="menu_b1ead0e"><div  class="menuholder1"><a href="javascript:void(0);">
-	<div id="menuentry_81903af"  class="menustyle1 menu_b1ead0e_mainMenuEntry mobileEntry">
-		<div class="menuentry_text1">
-  <span class="textstyle2">Menu &#9660;</span>
-		</div>
-	</div>
-</a>
-<a href="index.html" style="text-decoration:none">
-	<div id="menuentry_737a3143"  class="menustyle2 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Home  </span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_68d6851a"  class="menustyle3 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Chi Siamo</span>
-		</div>
-	</div>
-</a>
-<a href="prodottinew.html" style="text-decoration:none">
-	<div id="menuentry_4255b83f"  class="menustyle4 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Prodotti</span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_1b7b6964"  class="menustyle5 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Contattaci</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_2dd867cf"  class="menustyle6 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">LAvora con Noi</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_ffb383b"  class="menustyle7 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
-<a href="indicazioni.html" style="text-decoration:none">
-	<div id="menuentry_35a2cc0"  class="menustyle8 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
-
-	<script type="text/javascript" src="rc_images/wsp_menu.js"></script>
-	<script type="text/javascript">
-		var js_menu_b1ead0e= new wsp_menu('menu_b1ead0e', 'menu_b1ead0e', 20, null, true);
-
-		js_menu_b1ead0e.createMenuForItem('menuentry_81903af', ["  <span class=\"textstyle5\">HOME</span> ", 'index.html', '',
-		                                   "  <span class=\"textstyle5\">AZIENDA</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle5\">PRODOTTI</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTACI</span> ", 'modulo.html', '',
-		                                   "  <span class=\"textstyle5\">LAVORA CON NOI</span> ", 'lavoraconnoi.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTI</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle5\"></span> ", 'indicazioni.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_737a3143', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_68d6851a', ["  <span class=\"textstyle6\">Azienda</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle6\">Assistenza</span> ", 'contatti.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_4255b83f', ["  <span class=\"textstyle6\">Mago 4</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Ad Hoc Infinity</span> ", 'ahi.html', '',
-		                                   "  <span class=\"textstyle6\">MagoCloud</span> ", 'magocloud.html', '',
-		                                   "  <span class=\"textstyle6\">Soluzioni Aziendali</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle6\">CRM</span> ", 'crm.html', '',
-		                                   "  <span class=\"textstyle6\">Magazzino</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Dati di Fabbrica</span> ", 'easytime.html', '',
-		                                   "<div style=\"white-space:nowrap; overflow:hidden;\"><span style=\"display:inline-block; float:left;\">  <span class=\"textstyle6\">Aree di Competenza</span> </span><span style=\"display:inline-block; float:right; padding-top:2px; font-size:11pt; font-family:Arial, Helvetica, sans-serif; color:#000040; \"/>&#x25BA;</span></div>", ["  <span class=\"textstyle6\">Ammistrazione</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Logistica</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Produzione</span> ", 'easytime.html', '',
-		                                   "  <span class=\"textstyle6\">Commerciale</span> ", 'crm.html', ''], '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_1b7b6964', ["  <span class=\"textstyle6\">Dove siamo</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle6\">Richiedi Informazioni</span> ", 'modulo.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_2dd867cf', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_ffb383b', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_35a2cc0', []);
-
-	</script>
-</div></div><div  id="placeh_63851a2" >
+</div><!-- menu JavaScript sostituito dal menu in HTML in cima alla pagina --><div  id="placeh_63851a2" >
   <div class="textstyle7">
 <div id="container_664532d8"><div id="container_664532d8_padding" ><div class="textstyle1">    <a href=""><img src="rc_images/tp_logo_con_testo_ufficiale_def_pulito_2014.png" id="img_f079cff" alt="" title="" border="0" /></a>
 </div>
@@ -232,5 +283,17 @@ In sintesi, risultano conformi, per specifici moduli, tutte le principali soluzi
                     </div>
 </div>
 </div>  </div>
+
+<div class="tpMappa"><div class="tpw"><div class="cols"><div><h4>Aree d'impatto</h4><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0 e finanza agevolata</a></div><div><h4>Gestionali ERP</h4><a href="gestionalix.html">Quale gestionale scegliere</a><a href="mago4.html">Mago4</a><a href="magoamministrativa.html">Amministrazione e finanza</a><a href="magovenditeacquisti.html">Vendite e acquisti</a><a href="magomagazzino.html">Magazzino e logistica</a><a href="magoproduzione.html">Produzione</a><a href="magoweb.html">MagoWeb</a><a href="magocloud.html">MagoCloud</a><a href="ahi.html">Ad Hoc Infinity</a><a href="ahiamministrazione.html">Amministrazione</a><a href="ahivendite.html">Vendite e acquisti</a><a href="ahilogistica.html">Magazzino e logistica</a><a href="ahigestione.html">Controllo di gestione</a><a href="infinity.html">Infinity Zucchetti</a></div><div><h4>Applicazioni</h4><a href="crm.html">CRM</a><a href="dms.html">Gestione documentale</a><a href="portal.html">Portali ed e-commerce</a><a href="infobusiness.html">Business Intelligence</a><a href="fepasos.html">Fatturazione elettronica</a><a href="hr.html">Persone e presenze</a><a href="ztravel.html">Trasferte e note spese</a><a href="prodottinew.html">Tutti i prodotti</a><a href="verticali.html">Prodotti verticali</a></div><div><h4>Fabbrica e magazzino</h4><a href="easytime.html">EasyTime &mdash; tempi di produzione</a><a href="easyind40.html">EasyInd &mdash; macchine interconnesse</a><a href="operames.html">Opera MES</a><a href="wapp.html">W.App &mdash; WMS magazzino</a><a href="rfid.html">Barcode o RFID</a></div><div><h4>Assistenza</h4><a href="itek4.html">iTek4 &mdash; noleggio e manutenzione</a><a href="mobileticketnew.html">Mobile Ticket &mdash; ticketing</a><a href="contatti.html">Assistenza Pro</a></div><div><h4>Sistemi</h4><a href="sistemi.html">Sistemistica e sicurezza</a><a href="tecnologia.html">Innovazione tecnologica</a><a href="ruckus.html">WiFi professionale Ruckus</a></div><div><h4>Azienda</h4><a href="azienda.html">Chi siamo</a><a href="newsnew.html">News</a><a href="lavoraconnoi.html">Lavora con noi</a><a href="indicazioni.html">Dove siamo</a></div><div><h4>Contatti</h4><a href="modulo.html">Richiedi informazioni</a><a href="indicazioni.html">Dove siamo</a><a href="contatti.html">Assistenza</a><a href="tel:+390362163629">+39 0362 1636293</a><a href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a></div></div></div></div>
+<script>
+(function(){
+  var b=document.getElementById('tpBurger'), n=document.getElementById('tpNav');
+  if(!b||!n) return;
+  b.addEventListener('click', function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded', open?'true':'false');
+  });
+})();
+</script>
 </body>
 </html>

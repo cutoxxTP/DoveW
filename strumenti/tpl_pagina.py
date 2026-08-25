@@ -1,15 +1,51 @@
 # Modello comune delle pagine nuove di tp-italia.com (grafica del sito: Arial, blu #000080)
+from tpl_menu import menu_html, mappa_html, MENU_CSS, BURGER_JS
 STYLE = """<style>
 body{margin:0;background:#fff;color:#333;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6}
 a{color:#0000A0}
 .tpw{max-width:1120px;margin:0 auto;padding:0 20px}
-.tpTop{border-bottom:1px solid #D6D5D7;background:#fff}
-.tpTop .tpw{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-.tpTop img{height:52px;width:auto}
-.tpNav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
-.tpNav a{color:#000080;text-decoration:none;font-weight:bold;font-size:14.5px}
-.tpNav a:hover{color:#0000A0;text-decoration:underline}
-.tpNav a.on{border-bottom:2px solid #000080}
+/* ---- barra di navigazione unica del sito ---- */
+.tpTop{border-bottom:1px solid #D6D5D7;background:#fff;position:relative;z-index:60}
+.tpTop .tpw{display:flex;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+.tpTop .tpLogo img{height:52px;width:auto;display:block}
+.tpNav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.tpNav>a,.tpDrop>span{display:block;color:#000080;text-decoration:none;font-weight:bold;
+  font-size:14.5px;padding:9px 10px;border-radius:4px;cursor:pointer;white-space:nowrap}
+.tpNav>a:hover,.tpDrop:hover>span{background:#F0F3F9;color:#0000A0}
+.tpNav>a.on,.tpDrop.on>span{box-shadow:inset 0 -2px 0 #000080}
+.tpDrop{position:relative}
+.tpDrop>span::after{content:" \25be";font-size:10px;color:#7a86a8}
+.tpMenu{display:none;position:absolute;top:100%;left:0;min-width:262px;background:#fff;
+  border:1px solid #D6D5D7;border-top:3px solid #000080;border-radius:0 0 6px 6px;
+  box-shadow:0 14px 30px -12px rgba(0,0,40,.35);padding:8px 0}
+.tpDrop:hover .tpMenu,.tpDrop:focus-within .tpMenu{display:block}
+.tpDrop:last-of-type .tpMenu{left:auto;right:0}
+.tpMenu a{display:block;padding:7px 18px;color:#233;text-decoration:none;font-size:14px;font-weight:normal}
+.tpMenu a:hover{background:#F0F3F9;color:#000080}
+.tpMenu a.on{color:#000080;font-weight:bold}
+.tpMenu hr{border:0;border-top:1px solid #E6E9F0;margin:7px 14px}
+.tpNav .tpCta{background:#000080;color:#fff;margin-left:8px}
+.tpNav .tpCta:hover{background:#0000A0;color:#fff}
+.tpBurger{display:none;margin-left:auto;background:#fff;border:1px solid #000080;color:#000080;
+  font-weight:bold;font-size:14px;border-radius:5px;padding:9px 14px;cursor:pointer}
+.tpTop a:focus-visible,.tpTop button:focus-visible,.tpDrop>span:focus-visible{outline:2px solid #0000A0;outline-offset:2px}
+@media (max-width:1080px){
+  .tpNav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;
+    align-items:stretch;gap:0;padding:6px 16px 16px;border-bottom:1px solid #D6D5D7;
+    box-shadow:0 18px 30px -18px rgba(0,0,40,.5);max-height:76vh;overflow:auto}
+  .tpNav.open{display:flex}
+  .tpBurger{display:block}
+  .tpDrop>span{padding:11px 4px}
+  .tpMenu{display:block;position:static;border:0;box-shadow:none;padding:0 0 8px 14px;min-width:0;border-top:0}
+  .tpMenu a{padding:7px 4px}
+  .tpNav .tpCta{margin:10px 0 0;text-align:center}
+}
+/* ---- mappa nel piede ---- */
+.tpMappa{background:#0a1a52;color:#c9d8ef;padding:30px 0 6px;font-size:13.5px}
+.tpMappa .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px}
+.tpMappa h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.tpMappa a{color:#c9d8ef;text-decoration:none;display:block;padding:3px 0;line-height:1.4}
+.tpMappa a:hover{color:#fff;text-decoration:underline}
 .tpHero{background:#000080;color:#fff;padding:34px 0 30px}
 .tpHero .tpw{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
 .tpHero .txt{flex:1 1 460px}
@@ -35,6 +71,14 @@ main li{margin-bottom:8px}
 .tpGrid h4{margin:0 0 7px;color:#000080;font-size:15.5px}
 .tpGrid p{margin:0;font-size:14px;line-height:1.5;color:#444}
 .tpGrid a{font-size:13.5px;font-weight:bold;display:inline-block;margin-top:9px}
+.faq{border-top:1px solid #D6D5D7;max-width:82ch}
+.faq details{border-bottom:1px solid #D6D5D7;padding:16px 0}
+.faq summary{font-weight:bold;font-size:16px;color:#000080;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:#0000A0;font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{margin-top:10px}
 .tpFonte{font-size:13px;color:#777;margin:26px 0 0;max-width:82ch}
 .tpCta{background:#F4F6FA;border-top:1px solid #D6D5D7;margin-top:34px;padding:28px 0}
 .tpCta h2{margin:0 0 8px;color:#000080;font-size:21px}
@@ -60,10 +104,7 @@ LOGHI = ["topartner_erp_bn.png","m4platinumpabn.png","silver_cloud_micorsoft_1.p
          "fortinet_logo_bn2.png","azurebn.png"]
 
 def pagina(slug, title, desc, crumb, kick, h1, lead, body, ctah, ctap, fonte, on="", marchio=None):
-    nav=[]
-    for s2,l in NAV:
-        cls=' class="on"' if s2==on else ''
-        nav.append('<a href="%s"%s>%s</a>' % (s2,cls,l))
+    menu = menu_html(on or slug)
     marchio_html = ('<div class="marchio"><img src="rc_images/%s" alt=""></div>' % marchio) if marchio else ''
     loghi_html = ''.join('<img src="rc_images/%s" alt="">' % g for g in LOGHI)
     return """<!DOCTYPE html>
@@ -79,10 +120,7 @@ def pagina(slug, title, desc, crumb, kick, h1, lead, body, ctah, ctap, fonte, on
 </head>
 <body>
 
-<div class="tpTop"><div class="tpw">
-  <a href="index.html"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
-  <nav class="tpNav">%(nav)s</nav>
-</div></div>
+%(menu)s
 
 <div class="tpHero"><div class="tpw">
   <div class="txt">
@@ -107,6 +145,8 @@ def pagina(slug, title, desc, crumb, kick, h1, lead, body, ctah, ctap, fonte, on
   <a class="rec" href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a>
 </div></div>
 
+%(mappa)s
+
 <div class="tpFoot"><div class="tpw">
   <div class="loghi">%(loghi)s</div>
   <div class="righe">
@@ -117,7 +157,9 @@ def pagina(slug, title, desc, crumb, kick, h1, lead, body, ctah, ctap, fonte, on
   </div>
 </div></div>
 
+%(burger)s
 </body>
 </html>
-""" % dict(title=title, desc=desc, slug=slug, style=STYLE, nav=''.join(nav), crumb=crumb, kick=kick,
+""" % dict(title=title, desc=desc, slug=slug, style=STYLE, menu=menu, mappa=mappa_html(),
+           burger=BURGER_JS, crumb=crumb, kick=kick,
            h1=h1, lead=lead, marchio=marchio_html, body=body, fonte=fonte, ctah=ctah, ctap=ctap, loghi=loghi_html)

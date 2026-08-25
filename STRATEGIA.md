@@ -115,8 +115,12 @@ non legga il file.
 
 1. ✅ `<title>` e `meta description` unici su tutte le pagine riscritte.
 2. ✅ `sitemap.xml` (43 URL) e `robots.txt` creati.
-3. ✅ Menu con link reali nell'HTML sulle pagine nuove: `azienda.html` e `contatti.html` non sono
-   più invisibili ai motori di ricerca.
+3. ✅ **Menu unico in HTML su tutte le 44 pagine**, al posto di quello costruito in JavaScript.
+   Sette voci con i sottomenu — Aree d'impatto, Gestionali ERP, Applicazioni, Fabbrica e magazzino,
+   Assistenza, Sistemi, Azienda — più il pulsante Contatti. In fondo a ogni pagina c'è la mappa
+   completa del sito. Ogni pagina viva è raggiungibile in un clic, e i motori di ricerca la vedono:
+   `azienda.html` e `contatti.html` non sono più invisibili.
+   Il menu si cambia in un solo posto, `strumenti/tpl_menu.py`, e si ridistribuisce su tutte le pagine.
 4. ✅ Script Universal Analytics rimosso da tutte e 20 le pagine che lo contenevano: era corrotto
    e il servizio è dismesso dal 2023. **Serve da voi l'ID di misurazione GA4** per rimetterne uno che funzioni.
 5. ✅ Testo vero al posto delle immagini nelle pagine prima vuote (`presenzeweb`, `smplice`,

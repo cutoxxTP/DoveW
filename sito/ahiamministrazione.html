@@ -11,13 +11,48 @@
 body{margin:0;background:#fff;color:#333;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6}
 a{color:#0000A0}
 .tpw{max-width:1120px;margin:0 auto;padding:0 20px}
-.tpTop{border-bottom:1px solid #D6D5D7;background:#fff}
-.tpTop .tpw{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-.tpTop img{height:52px;width:auto}
-.tpNav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
-.tpNav a{color:#000080;text-decoration:none;font-weight:bold;font-size:14.5px}
-.tpNav a:hover{color:#0000A0;text-decoration:underline}
-.tpNav a.on{border-bottom:2px solid #000080}
+/* ---- barra di navigazione unica del sito ---- */
+.tpTop{border-bottom:1px solid #D6D5D7;background:#fff;position:relative;z-index:60}
+.tpTop .tpw{display:flex;align-items:center;gap:22px;padding-top:10px;padding-bottom:10px}
+.tpTop .tpLogo img{height:52px;width:auto;display:block}
+.tpNav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.tpNav>a,.tpDrop>span{display:block;color:#000080;text-decoration:none;font-weight:bold;
+  font-size:14.5px;padding:9px 10px;border-radius:4px;cursor:pointer;white-space:nowrap}
+.tpNav>a:hover,.tpDrop:hover>span{background:#F0F3F9;color:#0000A0}
+.tpNav>a.on,.tpDrop.on>span{box-shadow:inset 0 -2px 0 #000080}
+.tpDrop{position:relative}
+.tpDrop>span::after{content:" be";font-size:10px;color:#7a86a8}
+.tpMenu{display:none;position:absolute;top:100%;left:0;min-width:262px;background:#fff;
+  border:1px solid #D6D5D7;border-top:3px solid #000080;border-radius:0 0 6px 6px;
+  box-shadow:0 14px 30px -12px rgba(0,0,40,.35);padding:8px 0}
+.tpDrop:hover .tpMenu,.tpDrop:focus-within .tpMenu{display:block}
+.tpDrop:last-of-type .tpMenu{left:auto;right:0}
+.tpMenu a{display:block;padding:7px 18px;color:#233;text-decoration:none;font-size:14px;font-weight:normal}
+.tpMenu a:hover{background:#F0F3F9;color:#000080}
+.tpMenu a.on{color:#000080;font-weight:bold}
+.tpMenu hr{border:0;border-top:1px solid #E6E9F0;margin:7px 14px}
+.tpNav .tpCta{background:#000080;color:#fff;margin-left:8px}
+.tpNav .tpCta:hover{background:#0000A0;color:#fff}
+.tpBurger{display:none;margin-left:auto;background:#fff;border:1px solid #000080;color:#000080;
+  font-weight:bold;font-size:14px;border-radius:5px;padding:9px 14px;cursor:pointer}
+.tpTop a:focus-visible,.tpTop button:focus-visible,.tpDrop>span:focus-visible{outline:2px solid #0000A0;outline-offset:2px}
+@media (max-width:1080px){
+  .tpNav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;
+    align-items:stretch;gap:0;padding:6px 16px 16px;border-bottom:1px solid #D6D5D7;
+    box-shadow:0 18px 30px -18px rgba(0,0,40,.5);max-height:76vh;overflow:auto}
+  .tpNav.open{display:flex}
+  .tpBurger{display:block}
+  .tpDrop>span{padding:11px 4px}
+  .tpMenu{display:block;position:static;border:0;box-shadow:none;padding:0 0 8px 14px;min-width:0;border-top:0}
+  .tpMenu a{padding:7px 4px}
+  .tpNav .tpCta{margin:10px 0 0;text-align:center}
+}
+/* ---- mappa nel piede ---- */
+.tpMappa{background:#0a1a52;color:#c9d8ef;padding:30px 0 6px;font-size:13.5px}
+.tpMappa .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px}
+.tpMappa h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.tpMappa a{color:#c9d8ef;text-decoration:none;display:block;padding:3px 0;line-height:1.4}
+.tpMappa a:hover{color:#fff;text-decoration:underline}
 .tpHero{background:#000080;color:#fff;padding:34px 0 30px}
 .tpHero .tpw{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
 .tpHero .txt{flex:1 1 460px}
@@ -63,9 +98,87 @@ main li{margin-bottom:8px}
 <body>
 
 <div class="tpTop"><div class="tpw">
-  <a href="index.html"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
-  <nav class="tpNav"><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0</a><a href="index.html">Home</a><a href="prodottinew.html">Prodotti</a><a href="azienda.html">Azienda</a><a href="modulo.html">Contatti</a></nav>
+<a class="tpLogo" href="index.html" aria-label="Technology Partners Italia, home"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
+<button class="tpBurger" id="tpBurger" aria-expanded="false" aria-controls="tpNav">Menu</button>
+<nav class="tpNav" id="tpNav" aria-label="Navigazione principale">
+<a href="index.html">Home</a>
+<div class="tpDrop">
+<span tabindex="0" role="button">Aree d'impatto</span>
+<div class="tpMenu">
+<a href="ai.html">AI nativa</a>
+<a href="esg.html">Sostenibilit&agrave; ESG</a>
+<a href="fabbrica50.html">Fabbrica 5.0 e finanza agevolata</a>
 </div></div>
+<div class="tpDrop on">
+<span tabindex="0" role="button">Gestionali ERP</span>
+<div class="tpMenu">
+<a href="gestionalix.html">Quale gestionale scegliere</a>
+<hr>
+<a href="mago4.html">Mago4</a>
+<a href="magoamministrativa.html">&nbsp;&nbsp;Amministrazione e finanza</a>
+<a href="magovenditeacquisti.html">&nbsp;&nbsp;Vendite e acquisti</a>
+<a href="magomagazzino.html">&nbsp;&nbsp;Magazzino e logistica</a>
+<a href="magoproduzione.html">&nbsp;&nbsp;Produzione</a>
+<a href="magoweb.html">MagoWeb</a>
+<a href="magocloud.html">MagoCloud</a>
+<hr>
+<a href="ahi.html">Ad Hoc Infinity</a>
+<a href="ahiamministrazione.html" class="on">&nbsp;&nbsp;Amministrazione</a>
+<a href="ahivendite.html">&nbsp;&nbsp;Vendite e acquisti</a>
+<a href="ahilogistica.html">&nbsp;&nbsp;Magazzino e logistica</a>
+<a href="ahigestione.html">&nbsp;&nbsp;Controllo di gestione</a>
+<hr>
+<a href="infinity.html">Infinity Zucchetti</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Applicazioni</span>
+<div class="tpMenu">
+<a href="crm.html">CRM</a>
+<a href="dms.html">Gestione documentale</a>
+<a href="portal.html">Portali ed e-commerce</a>
+<a href="infobusiness.html">Business Intelligence</a>
+<a href="fepasos.html">Fatturazione elettronica</a>
+<a href="hr.html">Persone e presenze</a>
+<a href="ztravel.html">Trasferte e note spese</a>
+<hr>
+<a href="prodottinew.html">Tutti i prodotti</a>
+<a href="verticali.html">Prodotti verticali</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Fabbrica e magazzino</span>
+<div class="tpMenu">
+<a href="easytime.html">EasyTime &mdash; tempi di produzione</a>
+<a href="easyind40.html">EasyInd &mdash; macchine interconnesse</a>
+<a href="operames.html">Opera MES</a>
+<hr>
+<a href="wapp.html">W.App &mdash; WMS magazzino</a>
+<a href="rfid.html">Barcode o RFID</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Assistenza</span>
+<div class="tpMenu">
+<a href="itek4.html">iTek4 &mdash; noleggio e manutenzione</a>
+<a href="mobileticketnew.html">Mobile Ticket &mdash; ticketing</a>
+<hr>
+<a href="contatti.html">Assistenza Pro</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Sistemi</span>
+<div class="tpMenu">
+<a href="sistemi.html">Sistemistica e sicurezza</a>
+<a href="tecnologia.html">Innovazione tecnologica</a>
+<a href="ruckus.html">WiFi professionale Ruckus</a>
+</div></div>
+<div class="tpDrop">
+<span tabindex="0" role="button">Azienda</span>
+<div class="tpMenu">
+<a href="azienda.html">Chi siamo</a>
+<a href="newsnew.html">News</a>
+<a href="lavoraconnoi.html">Lavora con noi</a>
+<a href="indicazioni.html">Dove siamo</a>
+</div></div>
+<a class="tpCta" href="modulo.html">Contatti</a>
+</nav></div></div>
 
 <div class="tpHero"><div class="tpw">
   <div class="txt">
@@ -100,6 +213,8 @@ con supporto multivaluta per chi lavora con l'estero.</p>
   <a class="rec" href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a>
 </div></div>
 
+<div class="tpMappa"><div class="tpw"><div class="cols"><div><h4>Aree d'impatto</h4><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0 e finanza agevolata</a></div><div><h4>Gestionali ERP</h4><a href="gestionalix.html">Quale gestionale scegliere</a><a href="mago4.html">Mago4</a><a href="magoamministrativa.html">Amministrazione e finanza</a><a href="magovenditeacquisti.html">Vendite e acquisti</a><a href="magomagazzino.html">Magazzino e logistica</a><a href="magoproduzione.html">Produzione</a><a href="magoweb.html">MagoWeb</a><a href="magocloud.html">MagoCloud</a><a href="ahi.html">Ad Hoc Infinity</a><a href="ahiamministrazione.html">Amministrazione</a><a href="ahivendite.html">Vendite e acquisti</a><a href="ahilogistica.html">Magazzino e logistica</a><a href="ahigestione.html">Controllo di gestione</a><a href="infinity.html">Infinity Zucchetti</a></div><div><h4>Applicazioni</h4><a href="crm.html">CRM</a><a href="dms.html">Gestione documentale</a><a href="portal.html">Portali ed e-commerce</a><a href="infobusiness.html">Business Intelligence</a><a href="fepasos.html">Fatturazione elettronica</a><a href="hr.html">Persone e presenze</a><a href="ztravel.html">Trasferte e note spese</a><a href="prodottinew.html">Tutti i prodotti</a><a href="verticali.html">Prodotti verticali</a></div><div><h4>Fabbrica e magazzino</h4><a href="easytime.html">EasyTime &mdash; tempi di produzione</a><a href="easyind40.html">EasyInd &mdash; macchine interconnesse</a><a href="operames.html">Opera MES</a><a href="wapp.html">W.App &mdash; WMS magazzino</a><a href="rfid.html">Barcode o RFID</a></div><div><h4>Assistenza</h4><a href="itek4.html">iTek4 &mdash; noleggio e manutenzione</a><a href="mobileticketnew.html">Mobile Ticket &mdash; ticketing</a><a href="contatti.html">Assistenza Pro</a></div><div><h4>Sistemi</h4><a href="sistemi.html">Sistemistica e sicurezza</a><a href="tecnologia.html">Innovazione tecnologica</a><a href="ruckus.html">WiFi professionale Ruckus</a></div><div><h4>Azienda</h4><a href="azienda.html">Chi siamo</a><a href="newsnew.html">News</a><a href="lavoraconnoi.html">Lavora con noi</a><a href="indicazioni.html">Dove siamo</a></div><div><h4>Contatti</h4><a href="modulo.html">Richiedi informazioni</a><a href="indicazioni.html">Dove siamo</a><a href="contatti.html">Assistenza</a><a href="tel:+390362163629">+39 0362 1636293</a><a href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a></div></div></div></div>
+
 <div class="tpFoot"><div class="tpw">
   <div class="loghi"><img src="rc_images/topartner_erp_bn.png" alt=""><img src="rc_images/m4platinumpabn.png" alt=""><img src="rc_images/silver_cloud_micorsoft_1.png" alt=""><img src="rc_images/vmw__1.png" alt=""><img src="rc_images/hpbusiness.png" alt=""><img src="rc_images/ruckus_bn.png" alt=""><img src="rc_images/trendmicro_bn.png" alt=""><img src="rc_images/zebra_bn.png" alt=""><img src="rc_images/honeywell.png" alt=""><img src="rc_images/fortinet_logo_bn2.png" alt=""><img src="rc_images/azurebn.png" alt=""></div>
   <div class="righe">
@@ -110,5 +225,16 @@ con supporto multivaluta per chi lavora con l'estero.</p>
   </div>
 </div></div>
 
+
+<script>
+(function(){
+  var b=document.getElementById('tpBurger'), n=document.getElementById('tpNav');
+  if(!b||!n) return;
+  b.addEventListener('click', function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded', open?'true':'false');
+  });
+})();
+</script>
 </body>
 </html>

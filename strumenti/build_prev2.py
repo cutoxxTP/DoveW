@@ -11,7 +11,12 @@ PAGES=[("index","Home"),("ai","AI nativa"),("esg","ESG"),("fabbrica50","Fabbrica
  ("fepasos","Fatturazione elettronica"),("infobusiness","InfoBusiness"),("portal","Portali e e-commerce"),
  ("easytime","EasyTime"),("easyind40","EasyInd"),("wapp","W.App WMS"),("itek4","iTek4"),
  ("mobileticketnew","Mobile Ticket"),("rfid","Barcode o RFID"),("operames","Opera MES"),
- ("mago","Mago (confluita)")]
+ ("gestionalix2","x")]
+PAGES=[x for x in PAGES if x[0]!="gestionalix2"] + [
+ ("sistemi","Sistemistica"),("tecnologia","Innovazione"),("ruckus","WiFi Ruckus"),
+ ("prodottinew","Tutti i prodotti"),("verticali","Verticali"),("azienda","Chi siamo"),
+ ("newsnew","News"),("indicazioni","Dove siamo"),("modulo","Contatti"),
+ ("contatti","Assistenza"),("lavoraconnoi","Lavora con noi"),("mago","Mago (confluita)")]
 
 # --- immagini citate da queste pagine e dai loro CSS ---
 def refs(text):

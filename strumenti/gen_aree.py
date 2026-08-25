@@ -1,4 +1,6 @@
-import os
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tpl_pagina import pagina
 OUT="/home/user/DoveW/sito"
 
 STYLE = """<style>
@@ -279,7 +281,12 @@ PAGES=[
   fonte='Le funzionalit&agrave; descritte sono quelle di EasyInd ed EasyTime, soluzioni sviluppate da Technology Partners Italia S.r.l. e gi&agrave; installate in produzione.'),
 ]
 
+CRUMB = '<a href="index.html">Home</a> &rsaquo; Aree d\'impatto &rsaquo; %s'
+
 for p in PAGES:
-    html=page(**p)
-    open(os.path.join(OUT,p["slug"]),"w",encoding="utf-8").write(html)
-    print(p["slug"], len(html),"byte")
+    html = pagina(slug=p["slug"], title=p["title"], desc=p["desc"],
+                  crumb=CRUMB % p["crumb"], kick=p["kick"], h1=p["h1"], lead=p["lead"],
+                  body=p["body"], ctah=p["ctah"], ctap=p["ctap"],
+                  fonte=p["fonte"], on=p["slug"])
+    open(os.path.join(OUT, p["slug"]), "w", encoding="utf-8").write(html)
+    print(p["slug"], len(html), "byte")
