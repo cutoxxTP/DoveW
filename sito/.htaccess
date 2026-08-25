@@ -1,0 +1,24 @@
+# Technology Partners Italia — regole del sito
+# Redirect permanenti delle pagine confluite (impostati con il riposizionamento 2026).
+# Le pagine restano comunque presenti come riserva, nel caso in cui questo file non venga letto.
+
+Redirect 301 /mago.html          /mago4.html
+Redirect 301 /gestionali.html    /gestionalix.html
+Redirect 301 /presenzeweb.html   /hr.html
+Redirect 301 /smplice.html       /hr.html
+Redirect 301 /bussinessapps.html /infinity.html
+Redirect 301 /cloudapp.html      /infinity.html
+Redirect 301 /news.html          /newsnew.html
+
+# Compressione e cache delle risorse statiche
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

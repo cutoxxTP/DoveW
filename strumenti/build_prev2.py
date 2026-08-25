@@ -1,7 +1,15 @@
 import os, re, json, io, base64
 from PIL import Image
 SITE="/home/user/DoveW/sito"
-PAGES=[("index","Home"),("ai","AI nativa"),("esg","Sostenibilità ESG"),("fabbrica50","Fabbrica 5.0")]
+PAGES=[("index","Home"),("ai","AI nativa"),("esg","ESG"),("fabbrica50","Fabbrica 5.0"),
+ ("gestionalix","Quale ERP"),("mago4","Mago4"),("magoamministrativa","Mago4 · Amministrazione"),
+ ("magovenditeacquisti","Mago4 · Vendite"),("magomagazzino","Mago4 · Magazzino"),
+ ("magoproduzione","Mago4 · Produzione"),("magoweb","MagoWeb"),("magocloud","MagoCloud"),
+ ("ahi","Ad Hoc Infinity"),("ahiamministrazione","AHI · Amministrazione"),("ahivendite","AHI · Vendite"),
+ ("ahilogistica","AHI · Logistica"),("ahigestione","AHI · Controllo"),("infinity","Infinity"),
+ ("crm","CRM"),("dms","Documentale"),("hr","Persone e presenze"),("ztravel","ZTravel"),
+ ("fepasos","Fatturazione elettronica"),("infobusiness","InfoBusiness"),("portal","Portali e e-commerce"),
+ ("mago","Mago (confluita)")]
 
 # --- immagini citate da queste pagine e dai loro CSS ---
 def refs(text):
@@ -86,7 +94,7 @@ for slug,_ in PAGES:
     h=h.replace("</body>", RUNTIME+"</body>")
     pages[slug]=h
 
-SHELL=open("/tmp/claude-0/-home-user-DoveW/421a1c9a-0586-599a-9164-946f1d5f712f/scratchpad/shell_prev.html",encoding="utf-8").read()
+SHELL=open("/home/user/DoveW/strumenti/shell_prev.html",encoding="utf-8").read()
 out=(SHELL.replace("__PAGES__", json.dumps(pages, ensure_ascii=True).replace("</","<\\/"))
           .replace("__IMGS__", json.dumps(IMG, ensure_ascii=True).replace("</","<\\/"))
           .replace("__TABS__", json.dumps([[s,l] for s,l in PAGES], ensure_ascii=True)))

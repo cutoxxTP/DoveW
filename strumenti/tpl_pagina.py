@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Software gestionali | Technology Partners Italia</title>
-<meta name="description" content="Il contenuto è confluito nella pagina di confronto tra i gestionali ERP Zucchetti.">
-<link rel="canonical" href="https://www.tp-italia.com/gestionali.html">
-<link rel="icon" href="rc_images/custom.ico">
-<style>
+# Modello comune delle pagine nuove di tp-italia.com (grafica del sito: Arial, blu #000080)
+STYLE = """<style>
 body{margin:0;background:#fff;color:#333;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6}
 a{color:#0000A0}
 .tpw{max-width:1120px;margin:0 auto;padding:0 20px}
@@ -58,45 +50,65 @@ main li{margin-bottom:8px}
   border-top:1px solid rgba(255,255,255,.2);padding-top:16px}
 .tpFoot a{color:#c9d8ef}
 @media (max-width:760px){.tpHero h1{font-size:24px}.tpNav{gap:14px}.tpTop .tpw{gap:14px}}
-</style>
+</style>"""
+
+NAV = [("ai.html","AI nativa"),("esg.html","Sostenibilit&agrave; ESG"),("fabbrica50.html","Fabbrica 5.0"),
+       ("index.html","Home"),("prodottinew.html","Prodotti"),("azienda.html","Azienda"),("modulo.html","Contatti")]
+
+LOGHI = ["topartner_erp_bn.png","m4platinumpabn.png","silver_cloud_micorsoft_1.png","vmw__1.png",
+         "hpbusiness.png","ruckus_bn.png","trendmicro_bn.png","zebra_bn.png","honeywell.png",
+         "fortinet_logo_bn2.png","azurebn.png"]
+
+def pagina(slug, title, desc, crumb, kick, h1, lead, body, ctah, ctap, fonte, on="", marchio=None):
+    nav=[]
+    for s2,l in NAV:
+        cls=' class="on"' if s2==on else ''
+        nav.append('<a href="%s"%s>%s</a>' % (s2,cls,l))
+    marchio_html = ('<div class="marchio"><img src="rc_images/%s" alt=""></div>' % marchio) if marchio else ''
+    loghi_html = ''.join('<img src="rc_images/%s" alt="">' % g for g in LOGHI)
+    return """<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%(title)s</title>
+<meta name="description" content="%(desc)s">
+<link rel="canonical" href="https://www.tp-italia.com/%(slug)s">
+<link rel="icon" href="rc_images/custom.ico">
+%(style)s
 </head>
 <body>
 
 <div class="tpTop"><div class="tpw">
   <a href="index.html"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
-  <nav class="tpNav"><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0</a><a href="index.html">Home</a><a href="prodottinew.html">Prodotti</a><a href="azienda.html">Azienda</a><a href="modulo.html">Contatti</a></nav>
+  <nav class="tpNav">%(nav)s</nav>
 </div></div>
 
 <div class="tpHero"><div class="tpw">
   <div class="txt">
-    <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="prodottinew.html">Prodotti</a> &rsaquo; Sistema gestionale ERP</p>
-    <p class="kick">Pagina spostata</p>
-    <h1>Questa pagina &egrave; confluita nel confronto tra i gestionali</h1>
-    <p>Questo contenuto &egrave; stato riunito in una pagina sola, pi&ugrave; completa e aggiornata.</p>
+    <p class="crumb">%(crumb)s</p>
+    <p class="kick">%(kick)s</p>
+    <h1>%(h1)s</h1>
+    <p>%(lead)s</p>
   </div>
-  
+  %(marchio)s
 </div></div>
 
 <main><div class="tpw">
-
-<h2>Questa pagina &egrave; confluita nel confronto tra i gestionali</h2>
-<p>Il contenuto sui software gestionali &egrave; ora nella pagina che mette a confronto le cinque soluzioni Zucchetti e spiega come si sceglie tra di loro.</p>
-<p style="margin-top:22px"><a class="btn" href="gestionalix.html" style="display:inline-block;background:#000080;
-  color:#fff;text-decoration:none;font-weight:bold;padding:11px 20px;border-radius:5px">Vai a Sistema gestionale ERP</a></p>
-
-<p class="tpFonte">Pagina mantenuta attiva per non perdere i collegamenti esistenti. Il contenuto aggiornato &egrave; su <a href="gestionalix.html">Sistema gestionale ERP</a>.</p>
+%(body)s
+<p class="tpFonte">%(fonte)s</p>
 </div></main>
 
 <div class="tpCta"><div class="tpw">
-  <h2>Preferite parlarne direttamente?</h2>
-  <p>Un contatto diretto risolve in dieci minuti quello che una pagina spiega in dieci paragrafi.</p>
+  <h2>%(ctah)s</h2>
+  <p>%(ctap)s</p>
   <a class="btn" href="modulo.html">Richiedi informazioni</a>
   <a class="rec" href="tel:+390362163629">+39 0362 1636293</a>
   <a class="rec" href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a>
 </div></div>
 
 <div class="tpFoot"><div class="tpw">
-  <div class="loghi"><img src="rc_images/topartner_erp_bn.png" alt=""><img src="rc_images/m4platinumpabn.png" alt=""><img src="rc_images/silver_cloud_micorsoft_1.png" alt=""><img src="rc_images/vmw__1.png" alt=""><img src="rc_images/hpbusiness.png" alt=""><img src="rc_images/ruckus_bn.png" alt=""><img src="rc_images/trendmicro_bn.png" alt=""><img src="rc_images/zebra_bn.png" alt=""><img src="rc_images/honeywell.png" alt=""><img src="rc_images/fortinet_logo_bn2.png" alt=""><img src="rc_images/azurebn.png" alt=""></div>
+  <div class="loghi">%(loghi)s</div>
   <div class="righe">
     <span>Technology Partners Italia S.r.l. &middot; Via Vincenzo Monti, 74 &middot; 20832 Desio (MB)
       &middot; Tel +39 0362 1636293 &middot; <a href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a></span>
@@ -107,3 +119,5 @@ main li{margin-bottom:8px}
 
 </body>
 </html>
+""" % dict(title=title, desc=desc, slug=slug, style=STYLE, nav=''.join(nav), crumb=crumb, kick=kick,
+           h1=h1, lead=lead, marchio=marchio_html, body=body, fonte=fonte, ctah=ctah, ctap=ctap, loghi=loghi_html)

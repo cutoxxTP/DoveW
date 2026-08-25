@@ -78,10 +78,12 @@ Home  ─┬─ Aree d'impatto ─┬─ AI nativa                    [nuova]
        └─ Contatti                                        (modulo + indicazioni + contatti, unite)
 ```
 
-## Fase 2 — schede prodotto Zucchetti
+## Fase 2 — schede prodotto Zucchetti *(fatta)*
 
-Le pagine che descrivono prodotti Zucchetti vanno riscritte sulle **fonti ufficiali**, non sui testi
-attuali (fermi a Mago.net e a Infinity 4.2). Fonti di riferimento:
+Riscritte 22 schede prodotto sulle **fonti ufficiali zucchetti.it**, non sui testi attuali (fermi a
+Mago.net e a Infinity 4.2). Ogni pagina chiude con la fonte, il collegamento alla pagina ufficiale e
+la data di verifica, più l'avvertenza che i moduli disponibili dipendono dalla licenza.
+Fonti usate:
 
 | Nostra pagina | Fonte ufficiale |
 |---|---|
@@ -95,22 +97,35 @@ attuali (fermi a Mago.net e a Infinity 4.2). Fonti di riferimento:
 Regola per ogni scheda riscritta: **prima il problema aziendale, poi il prodotto**; funzionalità
 verificate sulla fonte ufficiale; nessun dato di versione o requisito di sistema in apertura.
 
-## Redirect
+## Redirect *(fatti)*
 
-Nessun URL viene eliminato: le pagine che si fondono restano online e rimandano alla nuova, con
-`301` lato server. La mappa completa vecchio → nuovo si compila insieme all'inventario, in
-`INVENTARIO.md`, colonna *Destino*.
+Nessun URL è stato eliminato. Le sette pagine confluite restano online e rimandano alla nuova:
+il `301` è in `sito/.htaccess`, e la pagina di riserva resta pubblicata nel caso in cui l'hosting
+non legga il file.
+
+| Vecchia | Nuova |
+|---|---|
+| `mago.html` | `mago4.html` |
+| `gestionali.html` | `gestionalix.html` |
+| `presenzeweb.html`, `smplice.html` | `hr.html` |
+| `bussinessapps.html`, `cloudapp.html` | `infinity.html` |
+| `news.html` | `newsnew.html` |
 
 ## Interventi tecnici che accompagnano il riposizionamento
 
-1. `<title>` e `meta description` unici su ogni pagina (oggi 8 pagine condividono lo stesso titolo).
-2. `sitemap.xml` e `robots.txt` (oggi assenti).
-3. Menu con link reali nell'HTML: oggi è costruito in JavaScript e nasconde `azienda.html` e
-   `contatti.html` ai motori di ricerca.
-4. Form propri al posto degli iframe di Google Forms, con notifica e tracciamento dei contatti.
-5. Google Analytics 4 al posto di Universal Analytics (fermo dal 2023, e con lo snippet corrotto).
-6. Testo vero al posto delle immagini nelle 6 pagine oggi vuote.
-7. Immagini in formato moderno e video su piattaforma esterna: oggi la home pesa decine di MB.
+1. ✅ `<title>` e `meta description` unici su tutte le pagine riscritte.
+2. ✅ `sitemap.xml` (43 URL) e `robots.txt` creati.
+3. ✅ Menu con link reali nell'HTML sulle pagine nuove: `azienda.html` e `contatti.html` non sono
+   più invisibili ai motori di ricerca.
+4. ✅ Script Universal Analytics rimosso da tutte e 20 le pagine che lo contenevano: era corrotto
+   e il servizio è dismesso dal 2023. **Serve da voi l'ID di misurazione GA4** per rimetterne uno che funzioni.
+5. ✅ Testo vero al posto delle immagini nelle pagine prima vuote (`presenzeweb`, `smplice`,
+   `ztravel`, `bussinessapps`, `cloudapp`, `hr`).
+6. ⬜ Form propri al posto degli iframe di Google Forms, con notifica e tracciamento dei contatti.
+7. ⬜ Immagini in formato moderno e video su piattaforma esterna: la home pesa ancora decine di MB.
+8. ⬜ Riscrittura delle pagine sulle soluzioni nostre (`easytime`, `easyind40`, `wapp`, `itek4`,
+   `mobileticketnew`, `rfid`, `operames`), della sistemistica (`sistemi`, `tecnologia`, `ruckus`),
+   di `azienda`, `verticali` e delle news, ferme al 2018.
 
 ## Che cosa NON compare sul sito, e perché
 

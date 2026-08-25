@@ -100,6 +100,13 @@ DEST = {
  "news.html": ("ARCHIVIA", "doppione storico; 301 su News"),
 }
 
+DONE = {"index.html","ai.html","esg.html","fabbrica50.html","gestionalix.html","gestionali.html",
+ "mago.html","mago4.html","magoweb.html","magocloud.html","magoamministrativa.html","magovenditeacquisti.html",
+ "magomagazzino.html","magoproduzione.html","ahi.html","ahiamministrazione.html","ahivendite.html",
+ "ahilogistica.html","ahigestione.html","infinity.html","crm.html","dms.html","hr.html","portal.html",
+ "infobusiness.html","fepasos.html","ztravel.html","presenzeweb.html","smplice.html","bussinessapps.html",
+ "cloudapp.html"}
+
 order = ["Home","Panoramica","ERP Mago","ERP Ad Hoc Infinity","Suite Zucchetti","Soluzioni TP","Sistemistica","News","Azienda"]
 by = {}
 for p in idx:
@@ -121,6 +128,7 @@ for c in order:
     L.append("|---|---|---:|---|---|")
     for p, note in sorted(by[c], key=lambda x: -x[0]["words"]):
         d = DEST.get(p["file"], ("", ""))
-        L.append(f"| `{p['file']}` | {p['title'] or '—'} | {p['words']} | {note} | **{d[0]}** {d[1]} |")
+        fatto = "✅ " if p["file"] in DONE else ""
+        L.append(f"| `{p['file']}` | {p['title'] or '—'} | {p['words']} | {note} | {fatto}**{d[0]}** {d[1]} |")
 open("/home/user/DoveW/INVENTARIO.md", "w", encoding="utf-8").write("\n".join(L) + "\n")
 print("\n".join(L[:12]))
