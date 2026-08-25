@@ -8,7 +8,7 @@ di qualsiasi modifica; i contenuti vengono riscritti e ampliati partendo da quel
 
 | Cartella | Contenuto |
 |---|---|
-| `archivio/sito/` | Copia integrale del sito online al 25/08/2026: 45 pagine HTML, CSS, 148 PNG, 78 JPG, 9 WebP, 6 video MP4, 2 PDF. Non va modificata: è la fonte di verità. |
+| `archivio/sito/` | Copia integrale del sito online al 25/08/2026: 45 pagine HTML, CSS, ~490 immagini, 6 video MP4, 2 PDF. Non va modificata: è la fonte di verità. |
 | `archivio/contenuti/` | Testo di ogni pagina estratto in Markdown (`.md` per pagina) + `_index.json` con titoli, keyword e conteggi. È il materiale da cui riscrivere. |
 | `INVENTARIO.md` | Tabella pagina per pagina, raggruppata per area, con la colonna *Destino* da compilare. |
 
