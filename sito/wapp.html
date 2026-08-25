@@ -1,221 +1,140 @@
-  <link rel="icon" href="rc_images/custom.ico">
-                <link rel="shortcut icon" href="rc_images/custom.ico">
-                    
-                    
-                    <!-- script Universal Analytics rimosso: non funzionante e servizio dismesso nel 2023 -->
-                    
-                    
-                    
-
 <!DOCTYPE html>
-<html> 
+<html lang="it">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="generator" content="RocketCake">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37003217-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-37003217-1');
-</script>
-	<title>W.App</title>
-	<meta name="keywords" content="Soluzione Logistica di technology Parteners Italia" />
-	<link rel="stylesheet" type="text/css" href="wapp_html.css?h=bc0dab6e">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W.App, il WMS per la gestione del magazzino | Technology Partners Italia</title>
+<meta name="description" content="W.App: WMS integrato nativamente con Mago4 e con i terminali Android. Ingresso merci, ubicazioni con suggerimento, prelievo ottimizzato, produzione, inventari e stampa etichette. Funziona anche offline.">
+<link rel="canonical" href="https://www.tp-italia.com/wapp.html">
+<link rel="icon" href="rc_images/custom.ico">
+<style>
+body{margin:0;background:#fff;color:#333;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6}
+a{color:#0000A0}
+.tpw{max-width:1120px;margin:0 auto;padding:0 20px}
+.tpTop{border-bottom:1px solid #D6D5D7;background:#fff}
+.tpTop .tpw{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.tpTop img{height:52px;width:auto}
+.tpNav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
+.tpNav a{color:#000080;text-decoration:none;font-weight:bold;font-size:14.5px}
+.tpNav a:hover{color:#0000A0;text-decoration:underline}
+.tpNav a.on{border-bottom:2px solid #000080}
+.tpHero{background:#000080;color:#fff;padding:34px 0 30px}
+.tpHero .tpw{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.tpHero .txt{flex:1 1 460px}
+.tpHero .marchio{flex:0 0 auto;background:#fff;border-radius:6px;padding:14px 18px}
+.tpHero .marchio img{max-height:64px;width:auto;display:block}
+.tpHero .kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0ea;margin:0 0 8px}
+.tpHero h1{margin:0;font-size:31px;line-height:1.18;font-weight:bold;max-width:22ch}
+.tpHero p{margin:14px 0 0;font-size:16.5px;line-height:1.55;color:#dfe8f6;max-width:74ch}
+.tpHero .crumb{font-size:13px;color:#9fc0ea;margin:0 0 14px}
+.tpHero .crumb a{color:#9fc0ea}
+main{padding:38px 0 10px}
+main h2{color:#000080;font-size:23px;margin:34px 0 12px;line-height:1.25}
+main h2:first-child{margin-top:0}
+main h3{color:#000080;font-size:17px;margin:22px 0 8px}
+main p{margin:0 0 14px;max-width:82ch}
+main ul{margin:0 0 16px;padding-left:22px;max-width:82ch}
+main li{margin-bottom:8px}
+.tpBox{background:#F4F6FA;border-left:4px solid #000080;padding:16px 20px;margin:22px 0;max-width:82ch}
+.tpBox b{color:#000080}
+.tpGrid{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 8px}
+.tpGrid div{flex:1 1 228px;background:#fff;border:1px solid #D6D5D7;border-top:3px solid #000080;
+  border-radius:5px;padding:16px 18px}
+.tpGrid h4{margin:0 0 7px;color:#000080;font-size:15.5px}
+.tpGrid p{margin:0;font-size:14px;line-height:1.5;color:#444}
+.tpGrid a{font-size:13.5px;font-weight:bold;display:inline-block;margin-top:9px}
+.tpFonte{font-size:13px;color:#777;margin:26px 0 0;max-width:82ch}
+.tpCta{background:#F4F6FA;border-top:1px solid #D6D5D7;margin-top:34px;padding:28px 0}
+.tpCta h2{margin:0 0 8px;color:#000080;font-size:21px}
+.tpCta p{margin:0 0 14px;max-width:70ch}
+.tpCta a.btn{display:inline-block;background:#000080;color:#fff;text-decoration:none;font-weight:bold;
+  padding:11px 20px;border-radius:5px;font-size:14.5px}
+.tpCta a.btn:hover{background:#0000A0}
+.tpCta .rec{margin-left:16px;font-size:14.5px;color:#000080;font-weight:bold;text-decoration:none}
+.tpFoot{background:#000080;color:#c9d8ef;padding:26px 0 22px;font-size:13.5px}
+.tpFoot .loghi{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-bottom:20px}
+.tpFoot .loghi img{height:34px;width:auto}
+.tpFoot .righe{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.2);padding-top:16px}
+.tpFoot a{color:#c9d8ef}
+@media (max-width:760px){.tpHero h1{font-size:24px}.tpNav{gap:14px}.tpTop .tpw{gap:14px}}
+</style>
 </head>
 <body>
-<div class="textstyle1">
-<a href="index.html"><img src="rc_images/newlogoquadro288x288bianco.png" width="288" height="288" id="img_4861029c" alt="" title="" border="0" /></a><div id="container_56c293c2"><div class="textstyle1">  <a href="https://www.instagram.com/tp_italia/" target="_blank"><img src="rc_images/instagram.png" id="img_77bb760a" alt="" title="" border="0" /></a>
-  <a href="https://www.youtube.com/channel/UC2emrPNT5PtEH9YRa-VnQLw" target="_blank"><img src="rc_images/youtube.jpg" id="img_1f573b75" alt="" title="YouTube" border="0" /></a>
-  <a href="https://www.facebook.com/Technology-Partners-Italia-104782464767334" target="_blank"><img src="rc_images/facebook_f_logo_svg.png" id="img_713aaca6" alt="" title="Facebook" border="0" /></a>
-  <a href="https://www.linkedin.com/company/technology-partners-italia" target="_blank"><img src="rc_images/witter.png" id="img_490f5bbd" alt="" title="Linkedin" border="0" /></a>
-</div>
-</div><div id="menu_b1ead0e"><div  class="menuholder1"><a href="javascript:void(0);">
-	<div id="menuentry_81903af"  class="menustyle1 menu_b1ead0e_mainMenuEntry mobileEntry">
-		<div class="menuentry_text1">
-  <span class="textstyle2">Menu &#9660;</span>
-		</div>
-	</div>
-</a>
-<a href="index.html" style="text-decoration:none">
-	<div id="menuentry_737a3143"  class="menustyle2 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Home  </span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_68d6851a"  class="menustyle3 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Chi Siamo</span>
-		</div>
-	</div>
-</a>
-<a href="prodottinew.html" style="text-decoration:none">
-	<div id="menuentry_4255b83f"  class="menustyle4 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Prodotti</span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_1b7b6964"  class="menustyle5 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Contattaci</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_2dd867cf"  class="menustyle6 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">LAvora con Noi</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_ffb383b"  class="menustyle7 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
-<a href="indicazioni.html" style="text-decoration:none">
-	<div id="menuentry_35a2cc0"  class="menustyle8 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
 
-	<script type="text/javascript" src="rc_images/wsp_menu.js"></script>
-	<script type="text/javascript">
-		var js_menu_b1ead0e= new wsp_menu('menu_b1ead0e', 'menu_b1ead0e', 20, null, true);
+<div class="tpTop"><div class="tpw">
+  <a href="index.html"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
+  <nav class="tpNav"><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0</a><a href="index.html">Home</a><a href="prodottinew.html">Prodotti</a><a href="azienda.html">Azienda</a><a href="modulo.html">Contatti</a></nav>
+</div></div>
 
-		js_menu_b1ead0e.createMenuForItem('menuentry_81903af', ["  <span class=\"textstyle5\">HOME</span> ", 'index.html', '',
-		                                   "  <span class=\"textstyle5\">AZIENDA</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle5\">PRODOTTI</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTACI</span> ", 'modulo.html', '',
-		                                   "  <span class=\"textstyle5\">LAVORA CON NOI</span> ", 'lavoraconnoi.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTI</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle5\"></span> ", 'indicazioni.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_737a3143', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_68d6851a', ["  <span class=\"textstyle6\">Azienda</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle6\">Assistenza</span> ", 'contatti.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_4255b83f', ["  <span class=\"textstyle6\">Mago 4</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Ad Hoc Infinity</span> ", 'ahi.html', '',
-		                                   "  <span class=\"textstyle6\">MagoCloud</span> ", 'magocloud.html', '',
-		                                   "  <span class=\"textstyle6\">Soluzioni Aziendali</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle6\">CRM</span> ", 'crm.html', '',
-		                                   "  <span class=\"textstyle6\">Magazzino</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Dati di Fabbrica</span> ", 'easytime.html', '',
-		                                   "<div style=\"white-space:nowrap; overflow:hidden;\"><span style=\"display:inline-block; float:left;\">  <span class=\"textstyle6\">Aree di Competenza</span> </span><span style=\"display:inline-block; float:right; padding-top:2px; font-size:11pt; font-family:Arial, Helvetica, sans-serif; color:#000040; \"/>&#x25BA;</span></div>", ["  <span class=\"textstyle6\">Ammistrazione</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Logistica</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Produzione</span> ", 'easytime.html', '',
-		                                   "  <span class=\"textstyle6\">Commerciale</span> ", 'crm.html', ''], '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_1b7b6964', ["  <span class=\"textstyle6\">Dove siamo</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle6\">Richiedi Informazioni</span> ", 'modulo.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_2dd867cf', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_ffb383b', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_35a2cc0', []);
+<div class="tpHero"><div class="tpw">
+  <div class="txt">
+    <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="prodottinew.html">Prodotti</a> &rsaquo; W.App &mdash; WMS</p>
+    <p class="kick">Soluzione sviluppata da noi &middot; Magazzino</p>
+    <h1>W.App: il magazzino sa dove sta ogni cosa</h1>
+    <p>La nostra soluzione WMS: merce in entrata e in uscita, ubicazioni, movimentazioni interne, inventari e supporto alla produzione. Integrata con Mago4 e con i terminali Android, funziona anche senza copertura di rete.</p>
+  </div>
+  
+</div></div>
 
-	</script>
-</div></div><div  id="placeh_63851a2" >
-  <div class="textstyle1">
-<div id="container_2b3682e9"><div class="textstyle1"><img src="rc_images/wappscurodef.png" width="137" height="198" id="img_54f4c575" alt="" title="" /><img src="rc_images/tp_logo_con_testo_ufficiale_def_pulito_gigante.png" width="1366" height="847" id="img_b910704" alt="" title="" /><div id="text_8b350b5"><div class="textstyle7"><img src="rc_images/wappscurodefsolotesto.png" width="567" height="302" id="img_2368ef8f" alt="" title="" /></div>
+<main><div class="tpw">
+
+<h2>Un magazzino che risponde alle tre domande</h2>
+<p>Che cosa c'&egrave;, dov'&egrave;, quanto vale. <b>W.App</b> &egrave; la nostra soluzione WMS
+(Warehouse Management System): gestisce merce in entrata e in uscita, ubicazioni, movimentazioni
+interne, inventari e supporto alla produzione, ed &egrave; <b>nativamente integrata</b> con i terminali
+Android e con il gestionale Mago.net/Mago4 &mdash; oltre che integrabile con gli ERP pi&ugrave; diffusi.</p>
+<p>Funziona <b>anche senza rete</b>: quando la copertura manca il terminale continua a lavorare e i
+dati si allineano al rientro. In un magazzino vero &egrave; una differenza sostanziale.</p>
+
+<h2>I moduli</h2>
+<div class="tpGrid">
+  <div><h4>Ingresso merci</h4>
+    <p>Dal terminale si identifica l'ordine a fornitore o di conto lavoro e si vedono le righe.
+      Ogni articolo si conta e si carica da barcode; se manca, si stampa l'etichetta. Alla conferma,
+      parziale o totale, il sistema genera la bolla di carico e chiude gli ordini.</p></div>
+  <div><h4>Ubicazioni</h4>
+    <p>Posizionamento, prelievo, trasferimento e ricerca per ubicazione leggendo il barcode dell'unit&agrave;
+      di carico e dell'ubicazione. Il terminale <b>suggerisce dove mettere o dove trovare</b> la merce,
+      in base alla topologia del magazzino, alle statistiche dei movimenti o alle preferenze impostate.
+      Gestisce limiti di peso e volume e caratteristiche come temperatura o categoria merce.</p></div>
+  <div><h4>Uscita merci</h4>
+    <p>Preparazione da ordine cliente, lista di prelievo o documento di trasporto, con controllo delle
+      quantit&agrave;, suggerimento delle ubicazioni da cui prelevare e <b>missione di prelievo
+      ottimizzata</b>. In chiusura genera il documento di trasporto, ed eventualmente la fattura,
+      e chiude l'ordine.</p></div>
+  <div><h4>Produzione</h4>
+    <p>Scarico dei componenti e carico del prodotto finito sugli ordini di produzione aperti, compresi
+      gli articoli non a distinta (viti, colla, materiali di consumo). Scarti e avanzi vengono tracciati
+      con causale; con il modulo di produzione esterna si controlla anche il conto lavoro.</p></div>
+  <div><h4>Inventario</h4>
+    <p>Normale o a campione, con o senza ubicazione, alla cieca o con raffronto, con report di confronto
+      tra quantit&agrave; contate e quantit&agrave; a gestionale.</p></div>
+  <div><h4>Stampanti industriali</h4>
+    <p>Modulo dedicato per la stampa di etichette articolo, scatola o pallet nel momento in cui servono.</p></div>
+</div>
+<p style="margin-top:22px"><a href="rfid.html"><b>Barcode o RFID? &rarr;</b></a></p>
+
+<p class="tpFonte">Funzionalit&agrave; descritte a partire dalla documentazione delle soluzioni installate presso i nostri clienti. Le configurazioni variano da impianto a impianto: quelle applicabili al vostro le vediamo insieme.</p>
+</div></main>
+
+<div class="tpCta"><div class="tpw">
+  <h2>Quanto durano oggi i vostri inventari?</h2>
+  <p>Se servono giorni di fermo, il conto &egrave; presto fatto. E l'inventario &egrave; solo la parte visibile: il resto si perde in prelievi sbagliati e ricerche.</p>
+  <a class="btn" href="modulo.html">Richiedi informazioni</a>
+  <a class="rec" href="tel:+390362163629">+39 0362 1636293</a>
+  <a class="rec" href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a>
 </div></div>
-</div><div id="container_b15ea70"><div id="container_b15ea70_padding" ></div></div>    </div>
-  <div class="textstyle7">
-<video  id="video_66ff0c77" src="rc_images/video_youtube_w_app.mp4" autoplay="autoplay"  loop="true" >
-Your browser does not support the video element.
-</video><div id="container_123d4590"><div id="container_123d4590_padding" ><div class="textstyle7"><a href="wapp.html#WappMod" style="text-decoration:none"><div id="button_336b34b6"><div class="vcenterstyle1"><div class="vcenterstyle2"><div class="textstyle7">    <span class="textstyle8">Moduli e Funzioni</span>
-</div>
-<div class="textstyle1"></div>
-</div></div></div></a><a href="wapp.html#WapSlid" style="text-decoration:none"><div id="button_7633ea42"><div class="vcenterstyle1"><div class="vcenterstyle2"><div class="textstyle1"></div>
-<div class="textstyle7">    <span class="textstyle8">Slide Show</span>
-</div>
-</div></div></div></a></div>
-<div style="clear:both"></div></div></div><div id="container_41df24f3"><div id="container_41df24f3_padding" ><div class="textstyle9"><span class="textstyle10"><br/>W.app &#232; una soluzione WMS (Warehouse Management System) per la gestione del magazzino, comprensiva di tutte le procedure di gestione comuni e non, nativamente integrata con i terminali mobile android e con il gestionale Mago.Net/Mago4 e integrabile con i pi&#249; comuni ERP.<br/><br/>Permette controllare e movimentare la merce in entrata e uscita, di eseguire l'inventario normale o a campione, di gestire le ubicazioni, di eseguire movimentazioni interne e di supportare la produzione.<br/><br/><br/></span><span class="textstyle11">Funzionalit&#224; chiave:</span><span class="textstyle10"><br/><br/></span><span class="textstyle12">- Integrazione nativa con il gestionale Mago.net/Mago4, Integrabile con altri gestionali<br/>- Capacit&#224; di lavorare online/offline<br/>- Ottime prestazioni, interfaccia grafica intuitiva<br/>- Possibilit&#224; di personalizzazioni ed estensioni<br/></span><span class="textstyle10"><br/></span></div>
-</div></div><div id="container_e741337"><div id="container_e741337_padding" ><div class="textstyle7"><div id="container_444e160c"><div id="container_444e160c_padding" ><div class="textstyle1"><div id="anchor_4c5aebb2"><a name="WappMod"></a></div>
-</div>
-<div class="textstyle7"><span class="textstyle13">MODULI E FUNZIONI</span></div>
-<div class="textstyle1"><span class="textstyle10"><br/>        </span><span class="textstyle11">Ingresso Merci</span><span class="textstyle10"><br/><br/></span></div>
-<div class="textstyle9"><span class="textstyle10"><br/>Il modulo gestisce l'ingresso merce a magazzino. <br/><br/>All&#8217;arrivo della merce dal fornitore o dal terzista &#232; possibile identificare l&#8217;ordine a fornitore o l&#8217;ordine di contro lavoro dal terminale, visualizzando a video tutte le righe merce.<br/>Ogni articolo &#232; contato e caricato tramite barcode, se quest&#8217;ultimo non &#232; presente, il programma permette di stampare l&#8217;etichetta. (se si ha il modulo integrazione stampanti industriali).<br/>L&#8217;operatore potr&#224; quindi confermare parzialmente o totalmente l&#8217;ordine. Il sistema genera in automatico la bolla di carico con le quantit&#224; dichiarate in ingresso e chiude gli ordini aperti.<br/>E' possibile configurare la procedura per lavorare sulla bolla di carico invece che sull'ordine se preferibile.<br/><br/></span></div>
-<div class="textstyle1"><span class="textstyle10"><br/></span><span class="textstyle11">Ubicazioni</span><span class="textstyle10"><br/><br/></span></div>
-<div class="textstyle9"><span class="textstyle10">Con il modulo ubicazioni &#232; possibile:<br/><br/>- Posizionare la merce in ubicazione<br/>- Estrarre da ubicazione<br/>- Trasferire merce tra ubicazioni<br/>- Ricercare articoli per ubicazione<br/>- Controllare specifiche ubicazioni<br/>Il posizionamento e il prelievo della merce dall&#8217;ubicazione viene fatto leggendo il barcode dell'UDC (articolo/scatola/pallet/...) e dell&#8217;ubicazione.<br/>Il terminale pu&#242; suggerire l&#8217;ubicazione in cui posizionare o trovare la merce, i suggerimenti possono essere guidati dalla topologia di magazzino, dalle statistiche dei movimenti recenti o dalle preferenze specificate manualmente sugli articoli o sulle ubicazioni. Sono gestiti i limiti di peso/volume delle ubicazioni ed eventuali altre caratteristiche aggiuntive (temperatura, posizionamento, categoria merce, ...) <br/><br/></span></div>
-<div class="textstyle1"><span class="textstyle10"><br/></span><span class="textstyle11">Uscita Merci</span><span class="textstyle10"><br/><br/></span></div>
-<div class="textstyle9"><span class="textstyle10">Il modulo permette all&#8217;operatore di preparare la merce in uscita partendo da un ordine a cliente, una picking o una DDT di vendita.<br/>In particolare consente di:<br/>- Preparare una picking e di controllare le quantit&#224; articoli.<br/>- In fase di preparazione, suggerire le ubicazioni da cui prelevare gli articoli e generare una missione di prelievo ottimizzata (con modulo Ubicazioni)<br/>- Stampare etichetta articolo/scatola/pallet al momento se necessario (con modulo Integrazione Stampanti Industriali)<br/>- In chiusura, creare una DDT di vendita (e/o fattura) e chiudere l'ordine.</span><span class="textstyle12"><br/></span></div>
-<div class="textstyle1"><span class="textstyle10"><br/></span><span class="textstyle11">Produzione</span><span class="textstyle10"><br/><br/></span></div>
-<div class="textstyle9"><span class="textstyle10">W.app gestisce lo scarico dei componenti e il carico del prodotto finito per la produzione.<br/>Si possono recuperare dal magazzino tutti i componenti degli ordini di produzione aperti.<br/>Selezionando l&#8217;ordine e leggendo i diversi articoli, verranno creati dei movimenti di magazzino.<br/>Il modulo gestisce anche articoli non presenti in distinta ma necessari alla produzione (es. viti, colla, materiale di consumo...)<br/>Gli scarti o gli avanzi di produzione vengono tracciati, &#232; possibile specificare una causale (scarto, errore distinta base, ...) durante il ritorno di produzione.<br/>Con il modulo di produzione esterna &#232; possibile controllare anche il conto lavoro. <br/></span></div>
-<div class="textstyle1"><span class="textstyle10"><br/><br/></span><span class="textstyle11">Inventario</span><span class="textstyle10"><br/><br/>&#200; possibile eseguire pi&#249; tipi di inventario, con o senza ubicazione, alla cieca o con raffronto, completo o a campione.<br/>Alcune modalit&#224; di inventario disponibili sono:<br/>- Inventario normale, dove l&#8217;operatore seleziona il magazzino e conferma le quantit&#224; articoli o articoli/ubicazioni.<br/>  Al termine verr&#224; creato un report di confronto con le quantit&#224; dichiarate in fase di inventario confrontate con le quantit&#224; presenti sul gestionale.<br/>- Inventario a campione, <br/>  Come l&#8217;inventario normale ma &#232; possibile selezionare solo alcuni articoli/ubicazioni e contare solo quelli.<br/>- Verifica casuale a campione<br/><br/><br/><br/></span></div>
-<div style="clear:both"></div></div></div></div>
-<div class="textstyle1"><div id="anchor_5232ff6b"><a name="WapSlid"></a></div>
-</div>
-<div class="textstyle7"><div id="container_52a2c477"><div id="container_52a2c477_padding" ><div class="textstyle7"><div id="container_38c8831a"><div class="textstyle1"><a href="javascript:js_slide_41f046e3.gotoPreviousFrame();"><img src="rc_images/frecciasx2.png" width="192" height="172" id="img_604b9633" alt="" title="" border="0" /></a><a href="javascript:js_slide_41f046e3.gotoNextFrame();"><img src="rc_images/frecciadx2.png" width="192" height="172" id="img_6e2b6ca6" alt="" title="" border="0" /></a></div>
-</div><div id="slide_41f046e3">
-	<script type="text/javascript" src="rc_images/wsp_slideshow.js"></script>
-	<script type="text/javascript">
-		var js_slide_41f046e3= new wsp_slideshow('slide_41f046e3',['rc_images/13.jpg', 'rc_images/23.jpg', 'rc_images/32.jpg', 'rc_images/43.jpg', 'rc_images/521.jpg', 'rc_images/63.jpg', 'rc_images/72.jpg'], 'fade', 10000, 1000, 'height', null, 'top', null,
-		{} );
-	</script>
+
+<div class="tpFoot"><div class="tpw">
+  <div class="loghi"><img src="rc_images/topartner_erp_bn.png" alt=""><img src="rc_images/m4platinumpabn.png" alt=""><img src="rc_images/silver_cloud_micorsoft_1.png" alt=""><img src="rc_images/vmw__1.png" alt=""><img src="rc_images/hpbusiness.png" alt=""><img src="rc_images/ruckus_bn.png" alt=""><img src="rc_images/trendmicro_bn.png" alt=""><img src="rc_images/zebra_bn.png" alt=""><img src="rc_images/honeywell.png" alt=""><img src="rc_images/fortinet_logo_bn2.png" alt=""><img src="rc_images/azurebn.png" alt=""></div>
+  <div class="righe">
+    <span>Technology Partners Italia S.r.l. &middot; Via Vincenzo Monti, 74 &middot; 20832 Desio (MB)
+      &middot; Tel +39 0362 1636293 &middot; <a href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a></span>
+    <span>P.IVA e C.F. 05660080960 &middot;
+      <a href="https://www.privacylab.it/informativa.php?13064379882">Informativa privacy</a></span>
+  </div>
 </div></div>
-<div style="clear:both"></div></div></div></div>
-<div style="clear:both"></div></div></div>    </div>
-  <div class="textstyle1">
-<div id="container_7c6265ff"><div id="container_7c6265ff_padding" ><div class="textstyle1">    <a href="easyind40.html" style="text-decoration:none"><div id="button_6e3009f2">
-      <div class="vcenterstyle1"><div class="vcenterstyle2">        <div class="textstyle1">
-          </div>
-        <div class="textstyle7">
-          <span class="textstyle14"><br/></span>
-          </div>
-        </div></div>
-      </div></a>
-    <a href="easytime.html" style="text-decoration:none"><div id="button_6d819d09">
-      <div class="vcenterstyle1"><div class="vcenterstyle2">        <div class="textstyle1">
-          </div>
-        <div class="textstyle7">
-          <span class="textstyle14"><br/></span>
-          </div>
-        </div></div>
-      </div></a>
-</div>
-<div style="clear:both"></div></div></div>    </div>
-</div>
-<div id="container_538c920c"><div class="textstyle1"><div id="container_64838530"><div class="textstyle1">  <img src="rc_images/topartner_erp_bn.png" id="img_7a07f909" alt="" title="" />
-  <img src="rc_images/silver_cloud_micorsoft_1.png" id="img_3be04fce" alt="" title="" />
-  <img src="rc_images/vmw__1.png" id="img_76c3b8c7" alt="" title="" />
-  <img src="rc_images/m4platinumpabn.png" id="img_7f26624f" alt="" title="" />
-  <img src="rc_images/ruckus_bn.png" id="img_61dc0909" alt="" title="" />
-  <img src="rc_images/hpbusiness.png" id="img_514ed77f" alt="" title="" />
-</div>
-</div></div>
-<div class="textstyle15"><div id="container_13c25dea"><div class="textstyle7"><img src="rc_images/tp_text23.png" id="img_4b4fcc49" alt="" title="" /><span class="textstyle16"><br/><br/><br/></span></div>
-<div class="textstyle1"><img src="rc_images/tp_bn_1.png" width="500" height="189" id="img_3ae0a30b" alt="" title="" /></div>
-</div></div>
-<div class="textstyle1"><div id="container_5030d534"><div class="textstyle7">  <span class="textstyle17"><br/><br/></span>
-</div>
-<div class="textstyle1">  <img src="rc_images/trendmicro_bn.png" id="img_79c10b47" alt="" title="" />
-  <img src="rc_images/zebra_bn.png" id="img_3187a14e" alt="" title="" />
-  <img src="rc_images/honeywell.png" id="img_6b0fb4d1" alt="" title="" />
-  <img src="rc_images/fortinet_logo_bn2.png" id="img_3d12a58f" alt="" title="" />
-  <img src="rc_images/azurebn.png" id="img_383dd26b" alt="" title="" />
-  <img src="rc_images/propartner_silver_reseller_logobn.png" id="img_342dd106" alt="" title="" />
-</div>
-</div><div id="container_3c9c6d1b"><div class="textstyle1">  <a href="https://www.instagram.com/tp_italia/" target="_blank"><img src="rc_images/instagram.png" id="img_50b7dce0" alt="" title="" border="0" /></a>
-  <a href="https://www.youtube.com/channel/UC2emrPNT5PtEH9YRa-VnQLw" target="_blank"><img src="rc_images/youtube.jpg" id="img_14a6db9" alt="" title="Instagram" border="0" /></a>
-  <a href="https://www.facebook.com/Technology-Partners-Italia-104782464767334" target="_blank"><img src="rc_images/facebook_f_logo_svg.png" id="img_48995cbb" alt="" title="Facebook" border="0" /></a>
-  <a href="https://www.linkedin.com/company/technology-partners-italia" target="_blank"><img src="rc_images/witter.png" id="img_399149d7" alt="" title="" border="0" /></a>
-</div>
-</div><a href="https://www.privacylab.it/informativa.php?13064379882" style="text-decoration:none"><div id="button_67c9c757"><div class="vcenterstyle1"><div class="vcenterstyle2"><div class="textstyle7">  <span class="textstyle18">Privacy</span>
-</div>
-<div class="textstyle1"></div>
-</div></div></div></a><div id="html_19407950"> <link rel="icon" href="rc_images/custom.ico">
-                <link rel="shortcut icon" href="rc_images/custom.ico">
-                    
-                    
-                    <!-- script Universal Analytics rimosso: non funzionante e servizio dismesso nel 2023 -->
-                    </div>
-</div>
-</div>  </div>
+
 </body>
 </html>

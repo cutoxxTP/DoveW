@@ -87,12 +87,12 @@ DEST = {
  "smplice.html": ("FONDI", "in Persone e presenze"),
  "ztravel.html": ("FONDI", "in Persone e presenze"),
  "itek4.html": ("RISCRIVI", "soluzione nostra: problema prima del prodotto"),
- "operames.html": ("FONDI", "in Fabbrica connessa"),
+ "operames.html": ("RISCRIVI", "prodotto Zucchetti: confronto con EasyTime ed EasyInd"),
  "easytime.html": ("RISCRIVI", "soluzione nostra: ottima base, tono da rifare"),
  "easyind40.html": ("RISCRIVI", "collegare a Finanza agevolata 5.0"),
  "wapp.html": ("RISCRIVI", "soluzione nostra"),
- "mobileticketnew.html": ("FONDI", "in Assistenza e ticketing con ITEK4"),
- "rfid.html": ("FONDI", "in Logistica di magazzino"),
+ "mobileticketnew.html": ("RISCRIVI", "tenuta separata da iTek4: sono due prodotti diversi"),
+ "rfid.html": ("RISCRIVI", "pagina di scelta barcode/RFID, collegata a W.App"),
  "sistemi.html": ("RISCRIVI", "togliere il gergo, tenere il ragionamento consulenziale"),
  "tecnologia.html": ("FONDI", "in Continuità e sicurezza"),
  "ruckus.html": ("FONDI", "in Continuità e sicurezza"),
@@ -105,7 +105,8 @@ DONE = {"index.html","ai.html","esg.html","fabbrica50.html","gestionalix.html","
  "magomagazzino.html","magoproduzione.html","ahi.html","ahiamministrazione.html","ahivendite.html",
  "ahilogistica.html","ahigestione.html","infinity.html","crm.html","dms.html","hr.html","portal.html",
  "infobusiness.html","fepasos.html","ztravel.html","presenzeweb.html","smplice.html","bussinessapps.html",
- "cloudapp.html"}
+ "cloudapp.html",
+ "easytime.html","easyind40.html","wapp.html","itek4.html","mobileticketnew.html","rfid.html","operames.html"}
 
 order = ["Home","Panoramica","ERP Mago","ERP Ad Hoc Infinity","Suite Zucchetti","Soluzioni TP","Sistemistica","News","Azienda"]
 by = {}

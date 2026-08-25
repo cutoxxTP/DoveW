@@ -66,13 +66,13 @@ Il segno ✅ indica le pagine già riscritte in `sito/`. Colonna **Destino** sec
 
 | Pagina | Titolo | Parole | Contenuto | Destino |
 |---|---|---:|---|---|
-| `easytime.html` | EasyTime | 1258 | EasyTime — rilevazione tempi di produzione | **RISCRIVI** soluzione nostra: ottima base, tono da rifare |
-| `rfid.html` | — | 939 | Identificazione automatica / RFID | **FONDI** in Logistica di magazzino |
-| `easyind40.html` | EasyInd | 692 | EasyInd 4.0 — industria 4.0 | **RISCRIVI** collegare a Finanza agevolata 5.0 |
-| `mobileticketnew.html` | MO TI | 650 | MO.TI. — mobile ticket assistenza | **FONDI** in Assistenza e ticketing con ITEK4 |
-| `wapp.html` | W.App | 614 | W.App — WMS magazzino | **RISCRIVI** soluzione nostra |
-| `operames.html` | Opera Mes | 406 | OPERA MES | **FONDI** in Fabbrica connessa |
-| `itek4.html` | Itek4 | 352 | ITEK4 — ticketing/assistenza | **RISCRIVI** soluzione nostra: problema prima del prodotto |
+| `easytime.html` | EasyTime | 1258 | EasyTime — rilevazione tempi di produzione | ✅ **RISCRIVI** soluzione nostra: ottima base, tono da rifare |
+| `rfid.html` | — | 939 | Identificazione automatica / RFID | ✅ **RISCRIVI** pagina di scelta barcode/RFID, collegata a W.App |
+| `easyind40.html` | EasyInd | 692 | EasyInd 4.0 — industria 4.0 | ✅ **RISCRIVI** collegare a Finanza agevolata 5.0 |
+| `mobileticketnew.html` | MO TI | 650 | MO.TI. — mobile ticket assistenza | ✅ **RISCRIVI** tenuta separata da iTek4: sono due prodotti diversi |
+| `wapp.html` | W.App | 614 | W.App — WMS magazzino | ✅ **RISCRIVI** soluzione nostra |
+| `operames.html` | Opera Mes | 406 | OPERA MES | ✅ **RISCRIVI** prodotto Zucchetti: confronto con EasyTime ed EasyInd |
+| `itek4.html` | Itek4 | 352 | ITEK4 — ticketing/assistenza | ✅ **RISCRIVI** soluzione nostra: problema prima del prodotto |
 
 ## Sistemistica
 

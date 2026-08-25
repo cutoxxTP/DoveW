@@ -1,244 +1,135 @@
-  <link rel="icon" href="rc_images/custom.ico">
-                <link rel="shortcut icon" href="rc_images/custom.ico">
-                    
-                    
-                    <!-- script Universal Analytics rimosso: non funzionante e servizio dismesso nel 2023 -->
-                    
-                    
-                    
-
 <!DOCTYPE html>
-<html> 
+<html lang="it">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="generator" content="RocketCake">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37003217-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-37003217-1');
-</script>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="rfid_html.css?h=cf997d35">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Identificazione automatica: barcode o RFID? | Technology Partners Italia</title>
+<meta name="description" content="Quando conviene la radiofrequenza e quando basta il codice a barre: usi tipici dell'RFID, infrastruttura necessaria (Wi-Fi, antenne, reader, stampanti, tag) e criteri di scelta per il magazzino.">
+<link rel="canonical" href="https://www.tp-italia.com/rfid.html">
+<link rel="icon" href="rc_images/custom.ico">
+<style>
+body{margin:0;background:#fff;color:#333;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6}
+a{color:#0000A0}
+.tpw{max-width:1120px;margin:0 auto;padding:0 20px}
+.tpTop{border-bottom:1px solid #D6D5D7;background:#fff}
+.tpTop .tpw{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.tpTop img{height:52px;width:auto}
+.tpNav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
+.tpNav a{color:#000080;text-decoration:none;font-weight:bold;font-size:14.5px}
+.tpNav a:hover{color:#0000A0;text-decoration:underline}
+.tpNav a.on{border-bottom:2px solid #000080}
+.tpHero{background:#000080;color:#fff;padding:34px 0 30px}
+.tpHero .tpw{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.tpHero .txt{flex:1 1 460px}
+.tpHero .marchio{flex:0 0 auto;background:#fff;border-radius:6px;padding:14px 18px}
+.tpHero .marchio img{max-height:64px;width:auto;display:block}
+.tpHero .kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0ea;margin:0 0 8px}
+.tpHero h1{margin:0;font-size:31px;line-height:1.18;font-weight:bold;max-width:22ch}
+.tpHero p{margin:14px 0 0;font-size:16.5px;line-height:1.55;color:#dfe8f6;max-width:74ch}
+.tpHero .crumb{font-size:13px;color:#9fc0ea;margin:0 0 14px}
+.tpHero .crumb a{color:#9fc0ea}
+main{padding:38px 0 10px}
+main h2{color:#000080;font-size:23px;margin:34px 0 12px;line-height:1.25}
+main h2:first-child{margin-top:0}
+main h3{color:#000080;font-size:17px;margin:22px 0 8px}
+main p{margin:0 0 14px;max-width:82ch}
+main ul{margin:0 0 16px;padding-left:22px;max-width:82ch}
+main li{margin-bottom:8px}
+.tpBox{background:#F4F6FA;border-left:4px solid #000080;padding:16px 20px;margin:22px 0;max-width:82ch}
+.tpBox b{color:#000080}
+.tpGrid{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 8px}
+.tpGrid div{flex:1 1 228px;background:#fff;border:1px solid #D6D5D7;border-top:3px solid #000080;
+  border-radius:5px;padding:16px 18px}
+.tpGrid h4{margin:0 0 7px;color:#000080;font-size:15.5px}
+.tpGrid p{margin:0;font-size:14px;line-height:1.5;color:#444}
+.tpGrid a{font-size:13.5px;font-weight:bold;display:inline-block;margin-top:9px}
+.tpFonte{font-size:13px;color:#777;margin:26px 0 0;max-width:82ch}
+.tpCta{background:#F4F6FA;border-top:1px solid #D6D5D7;margin-top:34px;padding:28px 0}
+.tpCta h2{margin:0 0 8px;color:#000080;font-size:21px}
+.tpCta p{margin:0 0 14px;max-width:70ch}
+.tpCta a.btn{display:inline-block;background:#000080;color:#fff;text-decoration:none;font-weight:bold;
+  padding:11px 20px;border-radius:5px;font-size:14.5px}
+.tpCta a.btn:hover{background:#0000A0}
+.tpCta .rec{margin-left:16px;font-size:14.5px;color:#000080;font-weight:bold;text-decoration:none}
+.tpFoot{background:#000080;color:#c9d8ef;padding:26px 0 22px;font-size:13.5px}
+.tpFoot .loghi{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-bottom:20px}
+.tpFoot .loghi img{height:34px;width:auto}
+.tpFoot .righe{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.2);padding-top:16px}
+.tpFoot a{color:#c9d8ef}
+@media (max-width:760px){.tpHero h1{font-size:24px}.tpNav{gap:14px}.tpTop .tpw{gap:14px}}
+</style>
 </head>
 <body>
-<div class="textstyle1">
-<a href="index.html"><img src="rc_images/newlogoquadro288x288bianco.png" width="288" height="288" id="img_4861029c" alt="" title="" border="0" /></a><div id="container_56c293c2"><div class="textstyle1">  <a href="https://www.instagram.com/tp_italia/" target="_blank"><img src="rc_images/instagram.png" id="img_77bb760a" alt="" title="" border="0" /></a>
-  <a href="https://www.youtube.com/channel/UC2emrPNT5PtEH9YRa-VnQLw" target="_blank"><img src="rc_images/youtube.jpg" id="img_1f573b75" alt="" title="YouTube" border="0" /></a>
-  <a href="https://www.facebook.com/Technology-Partners-Italia-104782464767334" target="_blank"><img src="rc_images/facebook_f_logo_svg.png" id="img_713aaca6" alt="" title="Facebook" border="0" /></a>
-  <a href="https://www.linkedin.com/company/technology-partners-italia" target="_blank"><img src="rc_images/witter.png" id="img_490f5bbd" alt="" title="Linkedin" border="0" /></a>
-</div>
-</div><div id="menu_b1ead0e"><div  class="menuholder1"><a href="javascript:void(0);">
-	<div id="menuentry_81903af"  class="menustyle1 menu_b1ead0e_mainMenuEntry mobileEntry">
-		<div class="menuentry_text1">
-  <span class="textstyle2">Menu &#9660;</span>
-		</div>
-	</div>
-</a>
-<a href="index.html" style="text-decoration:none">
-	<div id="menuentry_737a3143"  class="menustyle2 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Home  </span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_68d6851a"  class="menustyle3 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle3">Chi Siamo</span>
-		</div>
-	</div>
-</a>
-<a href="prodottinew.html" style="text-decoration:none">
-	<div id="menuentry_4255b83f"  class="menustyle4 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Prodotti</span>
-		</div>
-	</div>
-</a>
-<a href="javascript:void(0);">
-	<div id="menuentry_1b7b6964"  class="menustyle5 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">Contattaci</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_2dd867cf"  class="menustyle6 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text2">
-  <span class="textstyle4">LAvora con Noi</span>
-		</div>
-	</div>
-</a>
-<a href="lavoraconnoi.html" style="text-decoration:none">
-	<div id="menuentry_ffb383b"  class="menustyle7 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
-<a href="indicazioni.html" style="text-decoration:none">
-	<div id="menuentry_35a2cc0"  class="menustyle8 menu_b1ead0e_mainMenuEntry normalEntry">
-		<div class="menuentry_text3">
-		</div>
-	</div>
-</a>
 
-	<script type="text/javascript" src="rc_images/wsp_menu.js"></script>
-	<script type="text/javascript">
-		var js_menu_b1ead0e= new wsp_menu('menu_b1ead0e', 'menu_b1ead0e', 20, null, true);
-
-		js_menu_b1ead0e.createMenuForItem('menuentry_81903af', ["  <span class=\"textstyle5\">HOME</span> ", 'index.html', '',
-		                                   "  <span class=\"textstyle5\">AZIENDA</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle5\">PRODOTTI</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTACI</span> ", 'modulo.html', '',
-		                                   "  <span class=\"textstyle5\">LAVORA CON NOI</span> ", 'lavoraconnoi.html', '',
-		                                   "  <span class=\"textstyle5\">CONTATTI</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle5\"></span> ", 'indicazioni.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_737a3143', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_68d6851a', ["  <span class=\"textstyle6\">Azienda</span> ", 'azienda.html', '',
-		                                   "  <span class=\"textstyle6\">Assistenza</span> ", 'contatti.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_4255b83f', ["  <span class=\"textstyle6\">Mago 4</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Ad Hoc Infinity</span> ", 'ahi.html', '',
-		                                   "  <span class=\"textstyle6\">MagoCloud</span> ", 'magocloud.html', '',
-		                                   "  <span class=\"textstyle6\">Soluzioni Aziendali</span> ", 'prodottinew.html', '',
-		                                   "  <span class=\"textstyle6\">CRM</span> ", 'crm.html', '',
-		                                   "  <span class=\"textstyle6\">Magazzino</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Dati di Fabbrica</span> ", 'easytime.html', '',
-		                                   "<div style=\"white-space:nowrap; overflow:hidden;\"><span style=\"display:inline-block; float:left;\">  <span class=\"textstyle6\">Aree di Competenza</span> </span><span style=\"display:inline-block; float:right; padding-top:2px; font-size:11pt; font-family:Arial, Helvetica, sans-serif; color:#000040; \"/>&#x25BA;</span></div>", ["  <span class=\"textstyle6\">Ammistrazione</span> ", 'mago4.html', '',
-		                                   "  <span class=\"textstyle6\">Logistica</span> ", 'wapp.html', '',
-		                                   "  <span class=\"textstyle6\">Produzione</span> ", 'easytime.html', '',
-		                                   "  <span class=\"textstyle6\">Commerciale</span> ", 'crm.html', ''], '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_1b7b6964', ["  <span class=\"textstyle6\">Dove siamo</span> ", 'indicazioni.html', '',
-		                                   "  <span class=\"textstyle6\">Richiedi Informazioni</span> ", 'modulo.html', '']);
-		js_menu_b1ead0e.createMenuForItem('menuentry_2dd867cf', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_ffb383b', []);
-		js_menu_b1ead0e.createMenuForItem('menuentry_35a2cc0', []);
-
-	</script>
-</div></div><div  id="placeh_63851a2" >
-  <div class="textstyle1">
-<div id="slide_689f6604">
-	<script type="text/javascript" src="rc_images/wsp_slideshow.js"></script>
-	<script type="text/javascript">
-		var js_slide_689f6604= new wsp_slideshow('slide_689f6604',['rc_images/shutterstock_128207006.jpg'], 'fade', 1000, 250, 'width', null, 'top', null,
-		{} );
-	</script>
-</div><div id="container_69ffa1e9"><div id="container_69ffa1e9_padding" ></div></div><div id="container_2f2a28a5"><div id="container_2f2a28a5_padding" ><div class="textstyle7"><div id="container_7d762d8f"><div id="container_7d762d8f_padding" ><div class="textstyle1"><span class="textstyle8">Perch&#232; RFID</span><span class="textstyle9"><br/>Nel corso di questi anni  le implementazioni, a livello mondiale, di sistemi che utilizzano la tecnologia RFID sono stati molteplici e nei pi&#249; svariati settori:
-&#8211; gestione retail
-&#8211; gestione magazzino
-&#8211; controllo accessi sia a livello umano, animale o veicolare
-&#8211; tutela anticontraffazione
-&#8211; gestione tracciabilit&#224; prodotti interni all&#8217;azienda
-&#8211; gestione tracciabilit&#224; prodotti esternamente all&#8217;azienda
-&#8211; automatizzare fasi operative
-&#8211; sicurezza
-&#8211; etc&#8230;
- 
-<br/></span><span class="textstyle8">Le aziende che hanno deciso </span>    <span class="textstyle9">di puntare sulla radiofrequenza sono diverse sia, come abbiamo visto sopra, per tipologia ma anche per nazionalit&#224;, dimensione e fatturato.
-Questo trend positivo ha colpito anche l&#8217;Italia, le sue aziende e le sue attivit&#224; commerciali.
-Durante gli anni abbiamo potuto constatare un incremento costante delle richieste in ambito RFID. Parallelamente abbiamo appurato che anche la cultura media in materia &#232; cresciuta e gli stessi imprenditori hanno cominciato a capire e a metabolizzare meglio i vantaggi che questa tecnologia permette di conseguire.
-Se dovessimo cercare un fattore comune tra tutti i progetti studiati, eseguiti o immaginati, sicuramente questo sarebbe la volont&#224; di aumentare l&#8217;efficienza dei propri processi.
-Infatti se dovessi rispondere a una domanda diretta: &#8220;Cosa fa l&#8217;RFID?&#8221;, risponderemmo serenamente &#8220;Crea &#8217;efficienza&#8221;.
-La cosa fondamentale &#232; capire come la si pu&#242; raggiungere e soprattutto come ottenerla a fronte di un investimento studiato e calcolato a tavolino, in quanto, oggigiorno, le aziende hanno sempre pi&#249; la necessit&#224; di investire in modo oculato.</span>
-</div>
-</div></div></div>
-<div style="clear:both"></div></div></div>    </div>
-  <div class="textstyle7">
-<div id="container_6d7c3ff6"><div id="container_6d7c3ff6_padding" ></div></div><div id="container_53ece8f5"><div id="container_53ece8f5_padding" ><div class="textstyle1">    <span class="textstyle8">Quali sono gli obiettivi </span>
-    <span class="textstyle9">che un</span>
-    <span class="textstyle8"> magazzino RFId</span>
-    <span class="textstyle9"> consente di </span>
-<span class="textstyle8">raggiungere</span><span class="textstyle9">.
-Prima di addentrarci nella spiegazione del perch&#233; sia utile una tale infrastruttura , &#232; opportuno spiegare cosa pu&#242; essere .
-Il magazzino RFId &#232; uno stabile, uno stock, o un luogo che si interattivo che comunica con noi, che ci aiuta nella operativit&#224; quotidiana che ogni giorno si sviluppa la suo interno , da un&#8217; entrata merce ad un prelievo di componenti e/o materia prima, da un cambio di ubicazione ad un carico di prodotto finito.
-Per consentire a questo sistema magazzino di avere tali capacit&#224; dobbiamo attrezzarci di infrastrutture per WI_FI per le comunicazioni con il sistema centrale e disporre di antenne reader stampanti e tag
-Ma quali sono i benefici nel configurare una simile sistema/struttura
-Le migliorie che possiamo riscontrare sono molteplici, le pi&#249; evidenti ed immediate riconducono al tempo che i gli operatori andranno a risparmiare in tutte le operazioni svolte.
-<br/>In secondo piano non per importanze ma per percezione troviamo :
-<br/>1- Conoscenza sicura della posizione e quantit&#224; di uno specifico materiale e della singola matricola, evitando cosi la ricerca fisica del prodotto da parte dell&#8217;operatore.
-<br/>2- Conoscenza accurata del periodo di giacenza dei materiali (in caso di materiali con scadenza, ci permette di evitare sprechi di prodotti).
-<br/>3- Forte compressione dei tempi di inventario di magazzino,  svolto ormai in poche ore ( o minuti nel caso lo stock non abbia dimensioni elevate)
-<br/>Questi elencati, sono solo alcuni degli innumerevoli vantaggi che un magazzino RFId pu&#242; portare alla nostra azienda.
-Ora, vi stare chiedendo come si possa creare uno Stock in RFID ? Quali siano i requisiti fisici minimi (condizioni necessarie) per farlo?
-<br/></span><span class="textstyle8">Contattateci per avere maggiori informazioni </span></div>
-</div></div><div id="container_20eee89e"><div id="container_20eee89e_padding" ><div class="textstyle1">    <span class="textstyle8"><br/><br/>Il codice a barre, nato negli anni 50,</span>
-<span class="textstyle9"> &#232; stato il protagonista di una vera e proprio rivoluzione nella codifica dei prodotti. Presentato come unico modo, relativamente semplice, per codificare le informazione in maniera leggibile elettronicamente, si &#232; poi sviluppato in una vera e propria moltitudine di famiglie.
-Oggi il mondo dei codici a barre si &#232; ulteriormente espanso grazie all&#8217;avvento dei codici bidimensionali e stacked (ad esempio datamatrix, PDF417,..) capaci di una alta densit&#224; (ovvero la capacit&#224; di condensare le informazioni) e, soprattutto, di una capacit&#224; di autocorrezione del dato corrotto.
-
-   
-Figura 1: il codice lineare EAN13 ed il codice bidimensionale DataMatrix
-   
-Per parlare di una comparazione tra il mondo RFId ed il mondo barcode bisogna prima scoprirne le fondamentali caratteristiche e successivamente evincerne le differenze.
-<br/></span><span class="textstyle8">Barcode
-</span><span class="textstyle9">Metodo di codifica visivo (sia a matrice che a barre);
-<br/></span><span class="textstyle8">Densita&#8217; di codifica</span><span class="textstyle9">: medio bassa per i lineari, alta per i bidimensionali.
-<br/></span><span class="textstyle8">Sicurezza</span><span class="textstyle9">: il lineare ha capacit&#224; di intercettare errori di lettura (ma non di correggerli), il bidimensionale ha la capacit&#224; di correggere gli errori di lettura (il numero massimo di dati correggibili dipende dalla ridondanza introdotta).
-<br/></span><span class="textstyle8">Punto di forza</span><span class="textstyle9">: stampare un barcode e&#8217; un&#8217;operazione che si effettua semplicemente con una stampante di etichette e non richiede costi aggiuntivi.
-<br/></span><span class="textstyle8">Punto debole</span><span class="textstyle9">: il barcode deve essere a vista e la lettura viene effettuata un elemento alla volta.
-<br/><br/></span><span class="textstyle8">RFId
-</span><span class="textstyle9">Metodo di codifica tramite scrittura all&#8217;interno di una memoria non volatile;
-<br/></span><span class="textstyle8">Densita&#8217; di codifica</span><span class="textstyle9">: medio alta (generalmente superiore ad un codice lineare).
-<br/></span><span class="textstyle8">Sicurezza</span><span class="textstyle9">: password di accesso rendono sicuro il dispositivo; la capacit&#224; di correggere o rilevare errori dipende dagli algoritmi che si utilizzano.
-<br/></span><span class="textstyle8">Punto di forza</span><span class="textstyle9">: sono permesse letture multiple (fino alla lettura contemporanea di un pallet completo; caratteristica per&#242; dipendente dalla banda e dal tipo di RFId) e non necessariamente devono essere a vista.
-     
-<br/></span><span class="textstyle8">Punto debole:</span>    <span class="textstyle9"> le distanze di lettura dipendono molto dai materiali che circondano i transponder. Programmare un transponder e&#8217; una operazione che viene effettuata tramite apparati appositi che si installano sulle stampanti per etichette e il transponder e&#8217; un elemento avente un costo proprio.
-<br/>Da un&#8217;analisi delle caratteristiche riportate sopra si evince che i due prodotti hanno metodi completamente differenti. Inoltre si tenga presente che una infrastruttura in grado di programmare RFId &#232; in grado anche di stampare barcode, ma non viceversa. <br/>L&#8217;utilita&#8217; primaria dell&#8217;RFId si evince nella lettura multipla e nella non necessit&#224; di vedere l&#8217;etichetta stessa, caratteristiche che permettono la collezione di dati a distanza.
-
-     
-<br/></span>
-</div>
-</div></div>    </div>
-  <div class="textstyle1">
-<div id="container_49211e59"><div id="container_49211e59_padding" ><div class="textstyle1">    <a href="wapp.html" style="text-decoration:none"><div id="button_24a42f24">
-      <div class="vcenterstyle1"><div class="vcenterstyle2">        <div class="textstyle1">
-          </div>
-        <div class="textstyle7">
-          <span class="textstyle10"><br/></span>
-          </div>
-        </div></div>
-      </div></a>
-</div>
-<div style="clear:both"></div></div></div>    </div>
-</div>
-<div id="container_538c920c"><div class="textstyle1"><div id="container_64838530"><div class="textstyle1">  <img src="rc_images/topartner_erp_bn.png" id="img_7a07f909" alt="" title="" />
-  <img src="rc_images/silver_cloud_micorsoft_1.png" id="img_3be04fce" alt="" title="" />
-  <img src="rc_images/vmw__1.png" id="img_76c3b8c7" alt="" title="" />
-  <img src="rc_images/m4platinumpabn.png" id="img_7f26624f" alt="" title="" />
-  <img src="rc_images/ruckus_bn.png" id="img_61dc0909" alt="" title="" />
-  <img src="rc_images/hpbusiness.png" id="img_514ed77f" alt="" title="" />
-</div>
+<div class="tpTop"><div class="tpw">
+  <a href="index.html"><img src="rc_images/newlogoquadro300x300.png" alt="Technology Partners Italia"></a>
+  <nav class="tpNav"><a href="ai.html">AI nativa</a><a href="esg.html">Sostenibilit&agrave; ESG</a><a href="fabbrica50.html">Fabbrica 5.0</a><a href="index.html">Home</a><a href="prodottinew.html">Prodotti</a><a href="azienda.html">Azienda</a><a href="modulo.html">Contatti</a></nav>
 </div></div>
-<div class="textstyle11"><div id="container_13c25dea"><div class="textstyle7"><img src="rc_images/tp_text23.png" id="img_4b4fcc49" alt="" title="" /><span class="textstyle12"><br/><br/><br/></span></div>
-<div class="textstyle1"><img src="rc_images/tp_bn_1.png" width="500" height="189" id="img_3ae0a30b" alt="" title="" /></div>
+
+<div class="tpHero"><div class="tpw">
+  <div class="txt">
+    <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="prodottinew.html">Prodotti</a> &rsaquo; Identificazione automatica</p>
+    <p class="kick">Tecnologia &middot; Magazzino e tracciabilit&agrave;</p>
+    <h1>Barcode o RFID: si decide sui numeri, non sulla tecnologia</h1>
+    <p>La radiofrequenza legge pi&ugrave; oggetti insieme e senza contatto visivo. Costa di pi&ugrave; in etichette e infrastruttura, e va scelta dove quel tempo risparmiato si paga davvero.</p>
+  </div>
+  
 </div></div>
-<div class="textstyle1"><div id="container_5030d534"><div class="textstyle7">  <span class="textstyle13"><br/><br/></span>
+
+<main><div class="tpw">
+
+<h2>La domanda giusta non &egrave; &laquo;barcode o RFID&raquo;</h2>
+<p>&Egrave; &laquo;quante volte al giorno qualcuno deve avere in mano un oggetto per sapere che
+esiste&raquo;. Il codice a barre richiede che l'operatore veda l'etichetta, la inquadri e la legga,
+uno alla volta. La radiofrequenza legge <b>pi&ugrave; oggetti insieme, senza contatto visivo</b>:
+un pallet che passa da un varco, uno scaffale intero, un capo dentro una scatola.</p>
+<p>La differenza si paga in etichette e infrastruttura, e si recupera in tempo. Per questo la scelta
+non &egrave; ideologica: dipende dai volumi, da come &egrave; fatta la merce e da dove si perdono
+davvero le ore.</p>
+
+<h2>Dove l'RFID viene usato</h2>
+<ul>
+  <li>gestione del magazzino e del punto vendita;</li>
+  <li>tracciabilit&agrave; dei prodotti dentro e fuori l'azienda;</li>
+  <li>controllo degli accessi di persone e veicoli;</li>
+  <li>tutela contro la contraffazione;</li>
+  <li>automazione di fasi operative e sicurezza.</li>
+</ul>
+
+<h2>Che cosa serve, in pratica</h2>
+<p>Un magazzino in radiofrequenza non &egrave; solo un lettore: servono <b>copertura Wi-Fi</b> per
+dialogare con il sistema centrale, <b>antenne e reader</b> nei punti di passaggio, <b>stampanti</b>
+per i tag e i <b>tag</b> stessi, scelti in base al materiale e all'ambiente. &Egrave; un progetto di
+infrastruttura, ed &egrave; anche la ragione per cui va dimensionato prima e non durante.</p>
+<div class="tpBox">
+  <p><b>Come lo affrontiamo.</b> Prima si misura dove va il tempo oggi &mdash; ricevimento, prelievo,
+    inventario &mdash; e su quale operazione la lettura multipla farebbe la differenza. Poi si decide
+    la tecnologia. Nella maggior parte dei magazzini la risposta &egrave; mista: barcode dove basta,
+    radiofrequenza dove paga.</p>
 </div>
-<div class="textstyle1">  <img src="rc_images/trendmicro_bn.png" id="img_79c10b47" alt="" title="" />
-  <img src="rc_images/zebra_bn.png" id="img_3187a14e" alt="" title="" />
-  <img src="rc_images/honeywell.png" id="img_6b0fb4d1" alt="" title="" />
-  <img src="rc_images/fortinet_logo_bn2.png" id="img_3d12a58f" alt="" title="" />
-  <img src="rc_images/azurebn.png" id="img_383dd26b" alt="" title="" />
-  <img src="rc_images/propartner_silver_reseller_logobn.png" id="img_342dd106" alt="" title="" />
-</div>
-</div><div id="container_3c9c6d1b"><div class="textstyle1">  <a href="https://www.instagram.com/tp_italia/" target="_blank"><img src="rc_images/instagram.png" id="img_50b7dce0" alt="" title="" border="0" /></a>
-  <a href="https://www.youtube.com/channel/UC2emrPNT5PtEH9YRa-VnQLw" target="_blank"><img src="rc_images/youtube.jpg" id="img_14a6db9" alt="" title="Instagram" border="0" /></a>
-  <a href="https://www.facebook.com/Technology-Partners-Italia-104782464767334" target="_blank"><img src="rc_images/facebook_f_logo_svg.png" id="img_48995cbb" alt="" title="Facebook" border="0" /></a>
-  <a href="https://www.linkedin.com/company/technology-partners-italia" target="_blank"><img src="rc_images/witter.png" id="img_399149d7" alt="" title="" border="0" /></a>
-</div>
-</div><a href="https://www.privacylab.it/informativa.php?13064379882" style="text-decoration:none"><div id="button_67c9c757"><div class="vcenterstyle1"><div class="vcenterstyle2"><div class="textstyle7">  <span class="textstyle14">Privacy</span>
-</div>
-<div class="textstyle1"></div>
-</div></div></div></a><div id="html_19407950"> <link rel="icon" href="rc_images/custom.ico">
-                <link rel="shortcut icon" href="rc_images/custom.ico">
-                    
-                    
-                    <!-- script Universal Analytics rimosso: non funzionante e servizio dismesso nel 2023 -->
-                    </div>
-</div>
-</div>  </div>
+<p style="margin-top:22px"><a href="wapp.html"><b>W.App, il nostro WMS &rarr;</b></a></p>
+
+<p class="tpFonte">Funzionalit&agrave; descritte a partire dalla documentazione delle soluzioni installate presso i nostri clienti. Le configurazioni variano da impianto a impianto: quelle applicabili al vostro le vediamo insieme.</p>
+</div></main>
+
+<div class="tpCta"><div class="tpw">
+  <h2>Dove si perde il tempo nel vostro magazzino?</h2>
+  <p>Ricevimento, prelievo o inventario: la risposta decide la tecnologia, non il contrario.</p>
+  <a class="btn" href="modulo.html">Richiedi informazioni</a>
+  <a class="rec" href="tel:+390362163629">+39 0362 1636293</a>
+  <a class="rec" href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a>
+</div></div>
+
+<div class="tpFoot"><div class="tpw">
+  <div class="loghi"><img src="rc_images/topartner_erp_bn.png" alt=""><img src="rc_images/m4platinumpabn.png" alt=""><img src="rc_images/silver_cloud_micorsoft_1.png" alt=""><img src="rc_images/vmw__1.png" alt=""><img src="rc_images/hpbusiness.png" alt=""><img src="rc_images/ruckus_bn.png" alt=""><img src="rc_images/trendmicro_bn.png" alt=""><img src="rc_images/zebra_bn.png" alt=""><img src="rc_images/honeywell.png" alt=""><img src="rc_images/fortinet_logo_bn2.png" alt=""><img src="rc_images/azurebn.png" alt=""></div>
+  <div class="righe">
+    <span>Technology Partners Italia S.r.l. &middot; Via Vincenzo Monti, 74 &middot; 20832 Desio (MB)
+      &middot; Tel +39 0362 1636293 &middot; <a href="mailto:commerciale@tp-italia.com">commerciale@tp-italia.com</a></span>
+    <span>P.IVA e C.F. 05660080960 &middot;
+      <a href="https://www.privacylab.it/informativa.php?13064379882">Informativa privacy</a></span>
+  </div>
+</div></div>
+
 </body>
 </html>

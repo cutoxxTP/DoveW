@@ -123,9 +123,18 @@ non legga il file.
    `ztravel`, `bussinessapps`, `cloudapp`, `hr`).
 6. ⬜ Form propri al posto degli iframe di Google Forms, con notifica e tracciamento dei contatti.
 7. ⬜ Immagini in formato moderno e video su piattaforma esterna: la home pesa ancora decine di MB.
-8. ⬜ Riscrittura delle pagine sulle soluzioni nostre (`easytime`, `easyind40`, `wapp`, `itek4`,
-   `mobileticketnew`, `rfid`, `operames`), della sistemistica (`sistemi`, `tecnologia`, `ruckus`),
-   di `azienda`, `verticali` e delle news, ferme al 2018.
+8. ✅ Riscritte le pagine sulle soluzioni nostre: `easytime`, `easyind40`, `wapp`, `itek4`,
+   `mobileticketnew`, `rfid`, `operames`.
+9. ⬜ Restano: sistemistica (`sistemi`, `tecnologia`, `ruckus`), `azienda`, `verticali`,
+   e le news ferme al 2018.
+
+### Due decisioni cambiate rispetto al piano iniziale
+
+Nell'inventario `mobileticketnew` e `rfid` erano segnate come *da fondere*. Leggendo i contenuti
+si è visto che non regge: **Mobile Ticket e iTek4 sono due prodotti diversi** (ticketing di assistenza
+il primo, noleggio e manutenzione il secondo) e accorparli avrebbe confuso entrambi. E la pagina RFID
+è stata riscritta come **pagina di scelta** — barcode o radiofrequenza, con che cosa serve davvero —
+che è più utile di un paragrafo dentro W.App. Restano quindi pagine autonome, collegate fra loro.
 
 ## Che cosa NON compare sul sito, e perché
 
